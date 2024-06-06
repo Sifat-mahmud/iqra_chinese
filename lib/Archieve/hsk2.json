@@ -1,0 +1,1502 @@
+[
+  {
+    "character": "我们",
+    "pyning": "wǒmen",
+    "meaning": "we, us （pl.）"
+  },
+  {
+    "character": "你",
+    "pyning": "nǐ",
+    "meaning": "you"
+  },
+  {
+    "character": "你们",
+    "pyning": "nǐmen",
+    "meaning": "you (pl.)"
+  },
+  {
+    "character": "他",
+    "pyning": "tā",
+    "meaning": "he, him"
+  },
+  {
+    "character": "她",
+    "pyning": "tā",
+    "meaning": "she, her"
+  },
+  {
+    "character": "他们",
+    "pyning": "tāmen",
+    "meaning": "they (male+female / male，pl.)"
+  },
+  {
+    "character": "她们",
+    "pyning": "tāmen",
+    "meaning": "they (females, pl.)"
+  },
+  {
+    "character": "这 (这儿)",
+    "pyning": "zhè (zhèr)",
+    "meaning": "here, this"
+  },
+  {
+    "character": "那 (那儿)",
+    "pyning": "nà (nàr)",
+    "meaning": "there, that"
+  },
+  {
+    "character": "哪 (哪儿",
+    "pyning": "nǎ (nǎr)",
+    "meaning": "where"
+  },
+  {
+    "character": "谁",
+    "pyning": "shéi",
+    "meaning": "who"
+  },
+  {
+    "character": "什么",
+    "pyning": "shénme",
+    "meaning": "what, why"
+  },
+  {
+    "character": "多少",
+    "pyning": "duōshǎo",
+    "meaning": "how many, how much"
+  },
+  {
+    "character": "几",
+    "pyning": "jǐ",
+    "meaning": "a few, how many"
+  },
+  {
+    "character": "怎么",
+    "pyning": "zěnme",
+    "meaning": "how"
+  },
+  {
+    "character": "怎么样",
+    "pyning": "zěnmeyàng",
+    "meaning": "how about"
+  },
+  {
+    "character": "您",
+    "pyning": "nín",
+    "meaning": "you"
+  },
+  {
+    "character": "它",
+    "pyning": "tā",
+    "meaning": "it"
+  },
+  {
+    "character": "大家",
+    "pyning": "dàjiā",
+    "meaning": "everyone"
+  },
+  {
+    "character": "每",
+    "pyning": "měi",
+    "meaning": "every"
+  },
+  {
+    "character": "为什么",
+    "pyning": "wèishénme",
+    "meaning": "why"
+  },
+  {
+    "character": "一",
+    "pyning": "yī",
+    "meaning": "one"
+  },
+  {
+    "character": "二",
+    "pyning": "èr",
+    "meaning": "two"
+  },
+  {
+    "character": "三",
+    "pyning": "sān",
+    "meaning": "three"
+  },
+  {
+    "character": "四",
+    "pyning": "sì",
+    "meaning": "four"
+  },
+  {
+    "character": "五",
+    "pyning": "wǔ",
+    "meaning": "five"
+  },
+  {
+    "character": "六",
+    "pyning": "liù",
+    "meaning": "six"
+  },
+  {
+    "character": "七",
+    "pyning": "qī",
+    "meaning": "seven"
+  },
+  {
+    "character": "八",
+    "pyning": "bā",
+    "meaning": "eight"
+  },
+  {
+    "character": "九",
+    "pyning": "jiǔ",
+    "meaning": "nine"
+  },
+  {
+    "character": "十",
+    "pyning": "shí",
+    "meaning": "ten"
+  },
+  {
+    "character": "零",
+    "pyning": "líng",
+    "meaning": "zero"
+  },
+  {
+    "character": "两",
+    "pyning": "liǎng",
+    "meaning": "two"
+  },
+  {
+    "character": "百",
+    "pyning": "bǎi",
+    "meaning": "hundred"
+  },
+  {
+    "character": "千",
+    "pyning": "qiān",
+    "meaning": "thousand"
+  },
+  {
+    "character": "第一",
+    "pyning": "dìyī",
+    "meaning": "first"
+  },
+  {
+    "character": "个",
+    "pyning": "gè",
+    "meaning": "one, a, an"
+  },
+  {
+    "character": "岁",
+    "pyning": "suì",
+    "meaning": "year"
+  },
+  {
+    "character": "本",
+    "pyning": "běn",
+    "meaning": "volume"
+  },
+  {
+    "character": "些",
+    "pyning": "xiē",
+    "meaning": "some"
+  },
+  {
+    "character": "块",
+    "pyning": "kuài",
+    "meaning": "piece"
+  },
+  {
+    "character": "次",
+    "pyning": "cì",
+    "meaning": "number"
+  },
+  {
+    "character": "公斤",
+    "pyning": "gōngjīn",
+    "meaning": "kilogram"
+  },
+  {
+    "character": "元",
+    "pyning": "yuán",
+    "meaning": "yuan"
+  },
+  {
+    "character": "件",
+    "pyning": "jiàn",
+    "meaning": "piece"
+  },
+  {
+    "character": "张",
+    "pyning": "zhāng",
+    "meaning": "sheet"
+  },
+  {
+    "character": "不",
+    "pyning": "bù",
+    "meaning": "no"
+  },
+  {
+    "character": "没",
+    "pyning": "méi",
+    "meaning": "no"
+  },
+  {
+    "character": "很",
+    "pyning": "hěn",
+    "meaning": "quite, very"
+  },
+  {
+    "character": "太",
+    "pyning": "tài",
+    "meaning": "too"
+  },
+  {
+    "character": "都",
+    "pyning": "dōu",
+    "meaning": "all"
+  },
+  {
+    "character": "别",
+    "pyning": "bié",
+    "meaning": "other"
+  },
+  {
+    "character": "非常",
+    "pyning": "fēicháng",
+    "meaning": "very"
+  },
+  {
+    "character": "也",
+    "pyning": "yě",
+    "meaning": "likewise"
+  },
+  {
+    "character": "还",
+    "pyning": "hái",
+    "meaning": "repay"
+  },
+  {
+    "character": "最",
+    "pyning": "zuì",
+    "meaning": "most"
+  },
+  {
+    "character": "真",
+    "pyning": "zhēn",
+    "meaning": "real"
+  },
+  {
+    "character": "正在",
+    "pyning": "zhèngzài",
+    "meaning": "be being"
+  },
+  {
+    "character": "已经",
+    "pyning": "yǐjīng",
+    "meaning": "already"
+  },
+  {
+    "character": "一起",
+    "pyning": "yìqǐ",
+    "meaning": "together"
+  },
+  {
+    "character": "再",
+    "pyning": "zài",
+    "meaning": "again"
+  },
+  {
+    "character": "就",
+    "pyning": "jiǜ",
+    "meaning": "at once"
+  },
+  {
+    "character": "和",
+    "pyning": "hé",
+    "meaning": "and"
+  },
+  {
+    "character": "因为",
+    "pyning": "yīnwèi",
+    "meaning": "because"
+  },
+  {
+    "character": "所以",
+    "pyning": "suǒyǐ",
+    "meaning": "so"
+  },
+  {
+    "character": "但是",
+    "pyning": "dànshì",
+    "meaning": "but"
+  },
+  {
+    "character": "在",
+    "pyning": "zài",
+    "meaning": "in, at"
+  },
+  {
+    "character": "从",
+    "pyning": "cóng",
+    "meaning": "from"
+  },
+  {
+    "character": "对",
+    "pyning": "duì",
+    "meaning": "right"
+  },
+  {
+    "character": "此",
+    "pyning": "cǐ",
+    "meaning": "this"
+  },
+  {
+    "character": "向",
+    "pyning": "xiàng",
+    "meaning": "towards"
+  },
+  {
+    "character": "离",
+    "pyning": "lí",
+    "meaning": "leave"
+  },
+  {
+    "character": "的",
+    "pyning": "de",
+    "meaning": "possessive particle"
+  },
+  {
+    "character": "了",
+    "pyning": "le",
+    "meaning": "particle indicating a change of state or completion"
+  },
+  {
+    "character": "吗",
+    "pyning": "ma",
+    "meaning": "question particle"
+  },
+  {
+    "character": "呢",
+    "pyning": "ne",
+    "meaning": "particle indicating a question or emphasis"
+  },
+  {
+    "character": "得",
+    "pyning": "de",
+    "meaning": "structural particle"
+  },
+  {
+    "character": "着",
+    "pyning": "zhe",
+    "meaning": "particle indicating continuous aspect"
+  },
+  {
+    "character": "过",
+    "pyning": "guo",
+    "meaning": "particle indicating past experience"
+  },
+  {
+    "character": "吧",
+    "pyning": "ba",
+    "meaning": "suggestion particle"
+  },
+  {
+    "character": "喂",
+    "pyning": "wèi",
+    "meaning": "hello"
+  },
+  {
+    "character": "家",
+    "pyning": "jiā",
+    "meaning": "home"
+  },
+  {
+    "character": "学校",
+    "pyning": "xuéxiào",
+    "meaning": "school"
+  },
+  {
+    "character": "饭馆",
+    "pyning": "fàn guǎn",
+    "meaning": "restaurant"
+  },
+  {
+    "character": "商店",
+    "pyning": "shāngdiàn",
+    "meaning": "store"
+  },
+  {
+    "character": "医院",
+    "pyning": "yīyuàn",
+    "meaning": "hospital"
+  },
+  {
+    "character": "火车站",
+    "pyning": "huǒchēzhàn",
+    "meaning": "train station"
+  },
+  {
+    "character": "中国",
+    "pyning": "zhōngguó",
+    "meaning": "China"
+  },
+  {
+    "character": "机场",
+    "pyning": "jīchǎng",
+    "meaning": "airport"
+  },
+  {
+    "character": "教室",
+    "pyning": "jiàoshì",
+    "meaning": "classroom"
+  },
+  {
+    "character": "房间",
+    "pyning": "fángjiān",
+    "meaning": "room"
+  },
+  {
+    "character": "路",
+    "pyning": "lù",
+    "meaning": "road"
+  },
+  {
+    "character": "北京",
+    "pyning": "běijīng",
+    "meaning": "Beijing"
+  },
+  {
+    "character": "上",
+    "pyning": "shàng",
+    "meaning": "up"
+  },
+  {
+    "character": "下",
+    "pyning": "xià",
+    "meaning": "below"
+  },
+  {
+    "character": "前面",
+    "pyning": "qiánmiàn",
+    "meaning": "front"
+  },
+  {
+    "character": "后面",
+    "pyning": "hòumiàn",
+    "meaning": "behind"
+  },
+  {
+    "character": "左边",
+    "pyning": "zuǒbiān",
+    "meaning": "left"
+  },
+  {
+    "character": "右边",
+    "pyning": "yòubiān",
+    "meaning": "right"
+  },
+  {
+    "character": "外",
+    "pyning": "wài",
+    "meaning": "out"
+  },
+  {
+    "character": "旁边",
+    "pyning": "pángbiān",
+    "meaning": "side"
+  },
+  {
+    "character": "里面",
+    "pyning": "lǐmiàn",
+    "meaning": "inside"
+  },
+  {
+    "character": "今天",
+    "pyning": "jīntiān",
+    "meaning": "today"
+  },
+  {
+    "character": "明天",
+    "pyning": "míngtiān",
+    "meaning": "tomorrow"
+  },
+  {
+    "character": "昨天",
+    "pyning": "zuótiān",
+    "meaning": "yesterday"
+  },
+  {
+    "character": "上午",
+    "pyning": "shàngwǔ",
+    "meaning": "morning"
+  },
+  {
+    "character": "中午",
+    "pyning": "zhōngwǔ",
+    "meaning": "noon"
+  },
+  {
+    "character": "下午",
+    "pyning": "xiàwǔ",
+    "meaning": "afternoon"
+  },
+  {
+    "character": "年",
+    "pyning": "nián",
+    "meaning": "year"
+  },
+  {
+    "character": "月",
+    "pyning": "yuè",
+    "meaning": "month"
+  },
+  {
+    "character": "日",
+    "pyning": "rì",
+    "meaning": "day"
+  },
+  {
+    "character": "星期",
+    "pyning": "xīngqī",
+    "meaning": "week"
+  },
+  {
+    "character": "点",
+    "pyning": "diǎn",
+    "meaning": "dot, spot"
+  },
+  {
+    "character": "分钟",
+    "pyning": "fēnzhōng",
+    "meaning": "minute"
+  },
+  {
+    "character": "现在",
+    "pyning": "xiànzài",
+    "meaning": "now"
+  },
+  {
+    "character": "时候",
+    "pyning": "shíhóu",
+    "meaning": "time"
+  },
+  {
+    "character": "早上",
+    "pyning": "zǎoshàng",
+    "meaning": "morning"
+  },
+  {
+    "character": "晚上",
+    "pyning": "wǎnshàng",
+    "meaning": "night"
+  },
+  {
+    "character": "小时",
+    "pyning": "xiǎoshí",
+    "meaning": "hour"
+  },
+  {
+    "character": "时间",
+    "pyning": "shíjiān",
+    "meaning": "time"
+  },
+  {
+    "character": "去年",
+    "pyning": "qùnián",
+    "meaning": "last year"
+  },
+  {
+    "character": "号",
+    "pyning": "hào",
+    "meaning": "number"
+  },
+  {
+    "character": "生日",
+    "pyning": "shēngrì",
+    "meaning": "birthday"
+  },
+  {
+    "character": "爸爸",
+    "pyning": "bàba",
+    "meaning": "father"
+  },
+  {
+    "character": "妈妈",
+    "pyning": "māma",
+    "meaning": "mother"
+  },
+  {
+    "character": "儿子",
+    "pyning": "érzi",
+    "meaning": "son"
+  },
+  {
+    "character": "女儿",
+    "pyning": "nǚér",
+    "meaning": "daughter"
+  },
+  {
+    "character": "老师",
+    "pyning": "lǎoshī",
+    "meaning": "teacher"
+  },
+  {
+    "character": "学生",
+    "pyning": "xuéshēng",
+    "meaning": "student"
+  },
+  {
+    "character": "同学",
+    "pyning": "tóngxué",
+    "meaning": "shoolmate"
+  },
+  {
+    "character": "朋友",
+    "pyning": "péngyǒu",
+    "meaning": "friend"
+  },
+  {
+    "character": "医生",
+    "pyning": "yīshēng",
+    "meaning": "doctor"
+  },
+  {
+    "character": "先生",
+    "pyning": "xiānshēng",
+    "meaning": "sir"
+  },
+  {
+    "character": "小姐",
+    "pyning": "xiǎojiě",
+    "meaning": "Miss"
+  },
+  {
+    "character": "哥哥",
+    "pyning": "gēge",
+    "meaning": "brother"
+  },
+  {
+    "character": "姐姐",
+    "pyning": "jiějie",
+    "meaning": "sister"
+  },
+  {
+    "character": "弟弟",
+    "pyning": "dìdi",
+    "meaning": "younger brother"
+  },
+  {
+    "character": "妹妹",
+    "pyning": "mèimei",
+    "meaning": "sis"
+  },
+  {
+    "character": "丈夫",
+    "pyning": "zhàngfu",
+    "meaning": "husband"
+  },
+  {
+    "character": "妻子",
+    "pyning": "qīzi",
+    "meaning": "wife"
+  },
+  {
+    "character": "孩子",
+    "pyning": "háizi",
+    "meaning": "child"
+  },
+  {
+    "character": "男人",
+    "pyning": "nánrén",
+    "meaning": "man"
+  },
+  {
+    "character": "女人",
+    "pyning": "nǚrén",
+    "meaning": "woman"
+  },
+  {
+    "character": "服务员",
+    "pyning": "fúwùyuán",
+    "meaning": "waiter"
+  },
+  {
+    "character": "衣服",
+    "pyning": "yīfu",
+    "meaning": "cloth"
+  },
+  {
+    "character": "水",
+    "pyning": "shuǐ",
+    "meaning": "water"
+  },
+  {
+    "character": "菜",
+    "pyning": "cài",
+    "meaning": "vegetable"
+  },
+  {
+    "character": "米饭",
+    "pyning": "mǐfàn",
+    "meaning": "rice"
+  },
+  {
+    "character": "水果",
+    "pyning": "shuǐguǒ",
+    "meaning": "fruit"
+  },
+  {
+    "character": "苹果",
+    "pyning": "píngguǒ",
+    "meaning": "apple"
+  },
+  {
+    "character": "茶",
+    "pyning": "chá",
+    "meaning": "tea"
+  },
+  {
+    "character": "杯子",
+    "pyning": "bēizi",
+    "meaning": "cup"
+  },
+  {
+    "character": "钱",
+    "pyning": "qián",
+    "meaning": "money"
+  },
+  {
+    "character": "飞机",
+    "pyning": "fēijī",
+    "meaning": "airplane"
+  },
+  {
+    "character": "出租车",
+    "pyning": "chūzūchē",
+    "meaning": "taxi"
+  },
+  {
+    "character": "电视",
+    "pyning": "diànshì",
+    "meaning": "television"
+  },
+  {
+    "character": "电脑",
+    "pyning": "diànnǎo",
+    "meaning": "computer"
+  },
+  {
+    "character": "电影",
+    "pyning": "diànyǐng",
+    "meaning": "movie"
+  },
+  {
+    "character": "天气",
+    "pyning": "tiānqì",
+    "meaning": "weather"
+  },
+  {
+    "character": "猫",
+    "pyning": "māo",
+    "meaning": "cat"
+  },
+  {
+    "character": "狗",
+    "pyning": "gǒu",
+    "meaning": "dog"
+  },
+  {
+    "character": "东西",
+    "pyning": "dōngxī",
+    "meaning": "thing"
+  },
+  {
+    "character": "鱼",
+    "pyning": "yú",
+    "meaning": "fish"
+  },
+  {
+    "character": "羊肉",
+    "pyning": "yángròu",
+    "meaning": "mutton"
+  },
+  {
+    "character": "牛奶",
+    "pyning": "niúnǎi",
+    "meaning": "milk"
+  },
+  {
+    "character": "鸡蛋",
+    "pyning": "jīdàn",
+    "meaning": "egg"
+  },
+  {
+    "character": "西瓜",
+    "pyning": "xīguā",
+    "meaning": "watermelon"
+  },
+  {
+    "character": "咖啡",
+    "pyning": "kāfēi",
+    "meaning": "coffee"
+  },
+  {
+    "character": "自行车",
+    "pyning": "zìxíngchē",
+    "meaning": "bike"
+  },
+  {
+    "character": "船",
+    "pyning": "chuán",
+    "meaning": "boat"
+  },
+  {
+    "character": "雪",
+    "pyning": "xué",
+    "meaning": "snow"
+  },
+  {
+    "character": "药",
+    "pyning": "yào",
+    "meaning": "medicine"
+  },
+  {
+    "character": "手机",
+    "pyning": "shǒujī",
+    "meaning": "phone"
+  },
+  {
+    "character": "手表",
+    "pyning": "shǒubiǎo",
+    "meaning": "watch"
+  },
+  {
+    "character": "眼睛",
+    "pyning": "yǎnjīng",
+    "meaning": "eye"
+  },
+  {
+    "character": "身体",
+    "pyning": "shēntǐ",
+    "meaning": "body"
+  },
+  {
+    "character": "公共汽车",
+    "pyning": "gōnggòngqìchē",
+    "meaning": "bus"
+  },
+  {
+    "character": "报纸",
+    "pyning": "bàozhǐ",
+    "meaning": "newspaper"
+  },
+  {
+    "character": "人",
+    "pyning": "rén",
+    "meaning": "person"
+  },
+  {
+    "character": "名字",
+    "pyning": "míngzi",
+    "meaning": "name"
+  },
+  {
+    "character": "书",
+    "pyning": "shū",
+    "meaning": "book"
+  },
+  {
+    "character": "汉语",
+    "pyning": "hànyǔ",
+    "meaning": "Chinese"
+  },
+  {
+    "character": "字",
+    "pyning": "zì",
+    "meaning": "character"
+  },
+  {
+    "character": "桌子",
+    "pyning": "zhuōōzi",
+    "meaning": "desk"
+  },
+  {
+    "character": "椅子",
+    "pyning": "yǐzi",
+    "meaning": "chair"
+  },
+  {
+    "character": "门",
+    "pyning": "mén",
+    "meaning": "door"
+  },
+  {
+    "character": "题",
+    "pyning": "tí",
+    "meaning": "topic"
+  },
+  {
+    "character": "课",
+    "pyning": "kè",
+    "meaning": "lesson"
+  },
+  {
+    "character": "姓",
+    "pyning": "xìng",
+    "meaning": "surname"
+  },
+  {
+    "character": "问题",
+    "pyning": "wèntí",
+    "meaning": "question"
+  },
+  {
+    "character": "事情",
+    "pyning": "shìqing",
+    "meaning": "matter"
+  },
+  {
+    "character": "考试",
+    "pyning": "kǎoshì",
+    "meaning": "exam"
+  },
+  {
+    "character": "票",
+    "pyning": "piào",
+    "meaning": "ticket"
+  },
+  {
+    "character": "意思",
+    "pyning": "yìsi",
+    "meaning": "meaning"
+  },
+  {
+    "character": "颜色",
+    "pyning": "yánsè",
+    "meaning": "color"
+  },
+  {
+    "character": "谢谢",
+    "pyning": "xièxiè",
+    "meaning": "thank"
+  },
+  {
+    "character": "不客气",
+    "pyning": "búkèqì",
+    "meaning": "you are welcome"
+  },
+  {
+    "character": "再见",
+    "pyning": "zàijiàn",
+    "meaning": "good-bye"
+  },
+  {
+    "character": "请",
+    "pyning": "qǐng",
+    "meaning": "please"
+  },
+  {
+    "character": "对不起",
+    "pyning": "duìbùqǐ",
+    "meaning": "sorry"
+  },
+  {
+    "character": "没关系",
+    "pyning": "méiguānxì",
+    "meaning": "It doesn’t matter"
+  },
+  {
+    "character": "欢迎",
+    "pyning": "huānyíng",
+    "meaning": "welcome"
+  },
+  {
+    "character": "是",
+    "pyning": "shì",
+    "meaning": "am, is, are"
+  },
+  {
+    "character": "有",
+    "pyning": "yǒu",
+    "meaning": "have"
+  },
+  {
+    "character": "看",
+    "pyning": "kàn",
+    "meaning": "look"
+  },
+  {
+    "character": "听",
+    "pyning": "tīng",
+    "meaning": "listen"
+  },
+  {
+    "character": "说话",
+    "pyning": "shuōhuà",
+    "meaning": "speak"
+  },
+  {
+    "character": "读",
+    "pyning": "dú",
+    "meaning": "read"
+  },
+  {
+    "character": "写",
+    "pyning": "xiě",
+    "meaning": "write"
+  },
+  {
+    "character": "看见",
+    "pyning": "kànjiàn",
+    "meaning": "see"
+  },
+  {
+    "character": "叫",
+    "pyning": "jiào",
+    "meaning": "call"
+  },
+  {
+    "character": "来",
+    "pyning": "lái",
+    "meaning": "come"
+  },
+  {
+    "character": "回",
+    "pyning": "huí",
+    "meaning": "return"
+  },
+  {
+    "character": "去",
+    "pyning": "qù",
+    "meaning": "go"
+  },
+  {
+    "character": "吃",
+    "pyning": "chī",
+    "meaning": "eat"
+  },
+  {
+    "character": "喝",
+    "pyning": "hē",
+    "meaning": "drink"
+  },
+  {
+    "character": "睡觉",
+    "pyning": "shuìjiào",
+    "meaning": "sleep"
+  },
+  {
+    "character": "打电话",
+    "pyning": "dǎdiànhuà",
+    "meaning": "call up"
+  },
+  {
+    "character": "做",
+    "pyning": "zuò",
+    "meaning": "do"
+  },
+  {
+    "character": "买",
+    "pyning": "mǎi",
+    "meaning": "buy"
+  },
+  {
+    "character": "开",
+    "pyning": "kāi",
+    "meaning": "open"
+  },
+  {
+    "character": "坐",
+    "pyning": "zuò",
+    "meaning": "sit"
+  },
+  {
+    "character": "住",
+    "pyning": "zhù",
+    "meaning": "live"
+  },
+  {
+    "character": "学习",
+    "pyning": "xuéxí",
+    "meaning": "study"
+  },
+  {
+    "character": "工作",
+    "pyning": "gōngzuò",
+    "meaning": "work"
+  },
+  {
+    "character": "下雨",
+    "pyning": "xiàyǔ",
+    "meaning": "rain"
+  },
+  {
+    "character": "问",
+    "pyning": "wèn",
+    "meaning": "ask"
+  },
+  {
+    "character": "走",
+    "pyning": "zǒu",
+    "meaning": "walk"
+  },
+  {
+    "character": "进",
+    "pyning": "jìn",
+    "meaning": "enter"
+  },
+  {
+    "character": "出",
+    "pyning": "chū",
+    "meaning": "come"
+  },
+  {
+    "character": "跑步",
+    "pyning": "pǎobù",
+    "meaning": "run"
+  },
+  {
+    "character": "到",
+    "pyning": "dào",
+    "meaning": "arrive"
+  },
+  {
+    "character": "穿",
+    "pyning": "chuān",
+    "meaning": "wear"
+  },
+  {
+    "character": "洗",
+    "pyning": "xǐ",
+    "meaning": "wash"
+  },
+  {
+    "character": "给",
+    "pyning": "gěi",
+    "meaning": "give"
+  },
+  {
+    "character": "找",
+    "pyning": "zhǎo",
+    "meaning": "find"
+  },
+  {
+    "character": "懂",
+    "pyning": "dǒng",
+    "meaning": "understand"
+  },
+  {
+    "character": "笑",
+    "pyning": "xiào",
+    "meaning": "smile"
+  },
+  {
+    "character": "回答",
+    "pyning": "huídá",
+    "meaning": "answer"
+  },
+  {
+    "character": "告诉",
+    "pyning": "gàosù",
+    "meaning": "tell"
+  },
+  {
+    "character": "准备",
+    "pyning": "zhǔnbèi",
+    "meaning": "prepare"
+  },
+  {
+    "character": "开始",
+    "pyning": "kāishǐ",
+    "meaning": "begin"
+  },
+  {
+    "character": "介绍",
+    "pyning": "jièshào",
+    "meaning": "introduce"
+  },
+  {
+    "character": "帮助",
+    "pyning": "bāngzhù",
+    "meaning": "help"
+  },
+  {
+    "character": "玩",
+    "pyning": "wán",
+    "meaning": "play"
+  },
+  {
+    "character": "送",
+    "pyning": "sòng",
+    "meaning": "present"
+  },
+  {
+    "character": "等",
+    "pyning": "děng",
+    "meaning": "wait"
+  },
+  {
+    "character": "让",
+    "pyning": "ràng",
+    "meaning": "let"
+  },
+  {
+    "character": "起床",
+    "pyning": "qǐchuáng",
+    "meaning": "get up"
+  },
+  {
+    "character": "唱歌",
+    "pyning": "chànggē",
+    "meaning": "sing"
+  },
+  {
+    "character": "跳舞",
+    "pyning": "tiàowǔ",
+    "meaning": "dance"
+  },
+  {
+    "character": "旅游",
+    "pyning": "lǚyóu",
+    "meaning": "travel"
+  },
+  {
+    "character": "上班",
+    "pyning": "shàngbān",
+    "meaning": "be on duty"
+  },
+  {
+    "character": "生病",
+    "pyning": "shēngbìng",
+    "meaning": "fall ill"
+  },
+  {
+    "character": "休息",
+    "pyning": "xiūxi",
+    "meaning": "rest"
+  },
+  {
+    "character": "运动",
+    "pyning": "yùndòng",
+    "meaning": "exercise"
+  },
+  {
+    "character": "游泳",
+    "pyning": "yóuyǒng",
+    "meaning": "swim"
+  },
+  {
+    "character": "踢足球",
+    "pyning": "tīzúqiú",
+    "meaning": "play footbal"
+  },
+  {
+    "character": "打篮球",
+    "pyning": "dǎlánqiú",
+    "meaning": "play basketball"
+  },
+  {
+    "character": "完",
+    "pyning": "wán",
+    "meaning": "finish"
+  },
+  {
+    "character": "爱",
+    "pyning": "ài",
+    "meaning": "love"
+  },
+  {
+    "character": "喜欢",
+    "pyning": "xǐhuān",
+    "meaning": "love, like"
+  },
+  {
+    "character": "想",
+    "pyning": "xiǎng",
+    "meaning": "want"
+  },
+  {
+    "character": "认识",
+    "pyning": "rènshi",
+    "meaning": "know"
+  },
+  {
+    "character": "觉得",
+    "pyning": "juédé",
+    "meaning": "think"
+  },
+  {
+    "character": "知道",
+    "pyning": "zhīdào",
+    "meaning": "know"
+  },
+  {
+    "character": "希望",
+    "pyning": "xīwàng",
+    "meaning": "hope"
+  },
+  {
+    "character": "会",
+    "pyning": "huì",
+    "meaning": "can"
+  },
+  {
+    "character": "能",
+    "pyning": "néng",
+    "meaning": "can, be able to"
+  },
+  {
+    "character": "可以",
+    "pyning": "kěyǐ",
+    "meaning": "can"
+  },
+  {
+    "character": "要",
+    "pyning": "yào",
+    "meaning": "ask for"
+  },
+  {
+    "character": "可能",
+    "pyning": "kěnéng",
+    "meaning": "may"
+  },
+  {
+    "character": "好",
+    "pyning": "hǎo",
+    "meaning": "good"
+  },
+  {
+    "character": "大",
+    "pyning": "dà",
+    "meaning": "big"
+  },
+  {
+    "character": "小",
+    "pyning": "xiǎo",
+    "meaning": "small"
+  },
+  {
+    "character": "多",
+    "pyning": "duō",
+    "meaning": "many, much"
+  },
+  {
+    "character": "少",
+    "pyning": "shǎo",
+    "meaning": "few, little"
+  },
+  {
+    "character": "冷",
+    "pyning": "lěng",
+    "meaning": "cold"
+  },
+  {
+    "character": "热",
+    "pyning": "rè",
+    "meaning": "hot"
+  },
+  {
+    "character": "高兴",
+    "pyning": "gāoxìng",
+    "meaning": "happy"
+  },
+  {
+    "character": "漂亮",
+    "pyning": "piàoliàng",
+    "meaning": "beautiful"
+  },
+  {
+    "character": "高",
+    "pyning": "gāo",
+    "meaning": "tall"
+  },
+  {
+    "character": "红",
+    "pyning": "hóng",
+    "meaning": "red"
+  },
+  {
+    "character": "白",
+    "pyning": "bái",
+    "meaning": "white"
+  },
+  {
+    "character": "黑",
+    "pyning": "hēi",
+    "meaning": "black"
+  },
+  {
+    "character": "忙",
+    "pyning": "máng",
+    "meaning": "busy"
+  },
+  {
+    "character": "快",
+    "pyning": "kuài",
+    "meaning": "fast"
+  },
+  {
+    "character": "慢",
+    "pyning": "màn",
+    "meaning": "slow"
+  },
+  {
+    "character": "远",
+    "pyning": "yuǎn",
+    "meaning": "far"
+  },
+  {
+    "character": "近",
+    "pyning": "jìn",
+    "meaning": "close"
+  },
+  {
+    "character": "好吃",
+    "pyning": "hǎochī",
+    "meaning": "delicious"
+  },
+  {
+    "character": "累",
+    "pyning": "lèi",
+    "meaning": "tired"
+  },
+  {
+    "character": "长",
+    "pyning": "cháng",
+    "meaning": "long"
+  },
+  {
+    "character": "新",
+    "pyning": "xīn",
+    "meaning": "new"
+  },
+  {
+    "character": "贵",
+    "pyning": "guì",
+    "meaning": "expensive"
+  },
+  {
+    "character": "便宜",
+    "pyning": "piányi",
+    "meaning": "cheap"
+  },
+  {
+    "character": "晴",
+    "pyning": "qíng",
+    "meaning": "fine"
+  },
+  {
+    "character": "阴",
+    "pyning": "yīn",
+    "meaning": "cloudy"
+  },
+  {
+    "character": "错",
+    "pyning": "cuò",
+    "meaning": "wrong"
+  },
+  {
+    "character": "快乐",
+    "pyning": "kuàilè",
+    "meaning": "happy"
+  }
+]

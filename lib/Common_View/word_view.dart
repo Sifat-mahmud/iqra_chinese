@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iqra_chinese/Common_widgets/wrapped_text.dart';
 
 import '../Archieve/wordModel.dart';
 import '../Common_widgets/hideable_widgets.dart';
+import '../Common_widgets/listIndex_view.dart';
 import '../main.dart';
 
 class WordView extends StatefulWidget {
@@ -37,18 +39,26 @@ class _WordViewState extends State<WordView> {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
         children: [
-          Center(
-            child: GestureDetector(
-              onTap: () {
-                ttsServiceCn.speak(widget.word.character);
-              },
-              child: Text(
-                widget.word.character,
-                style: TextStyle(fontSize: 60.0, fontWeight: FontWeight.bold),
-              ),
+
+          blank(),
+
+          blank(),
+
+          GestureDetector(
+            onTap: () {
+              ttsServiceCn.speak(widget.word.character);
+            },
+            child: WrappedText(
+              text : widget.word.character,
+              ratio: .90,
+              textStyle: TextStyle(fontSize: 60.0, fontWeight: FontWeight.bold),
             ),
           ),
+
+          blank(),
+
           // if (meaningVisible)
           //   Center(
           //     child: GestureDetector(
@@ -68,6 +78,8 @@ class _WordViewState extends State<WordView> {
               initiallyVisible: meaningVisible,
             ),
           ),
+
+          blank(),
           Center(
             child: HidableWidget(
               textHeader: 'Pinyin: ',
@@ -78,5 +90,9 @@ class _WordViewState extends State<WordView> {
         ],
       ),
     );
+  }
+
+  Widget blank(){
+    return SizedBox(height: 8,);
   }
 }

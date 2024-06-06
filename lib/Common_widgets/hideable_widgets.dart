@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iqra_chinese/Common_widgets/wrapped_text.dart';
 
 import '../main.dart';
 
@@ -38,14 +39,17 @@ class _HidableWidgetState extends State<HidableWidget> {
           widget.textHeader,
           style: TextStyle(fontSize: 16.0),
         ),
+        SizedBox(
+          width: 5,
+        ),
         if (isVisible)
           GestureDetector(
             onTap: () {
               ttsServiceEn.speak(widget.text);
             },
-            child: Text(
-              widget.text,
-              style: TextStyle(fontSize: 16.0),
+            child: WrappedText(
+              text : widget.text,
+              ratio: .65
             ),
           ),
         IconButton(
