@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:background="@color/bg" android:padding="32dp">
+
+    <!-- Clock-style time display -->
+    <TextClock
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:format12Hour="hh:mm"
+        android:format24Hour="HH:mm"
+        android:textSize="72sp" android:textColor="@color/gold"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextClock
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:format12Hour="EEE, MMM d"
+        android:format24Hour="EEE, MMM d"
+        android:textSize="16sp" android:textColor="@color/text_muted"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Alarm icon -->
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="⏰" android:textSize="64sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Title -->
+    <TextView android:id="@+id/tvAlarmTitle"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="⏰ STUDY NOW" android:textSize="26sp"
+        android:textColor="@color/ruby" android:textStyle="bold"
+        android:gravity="center" android:layout_marginBottom="16dp"/>
+
+    <!-- Message -->
+    <TextView android:id="@+id/tvAlarmMsg"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Complete your 30-minute study goal."
+        android:textSize="15sp" android:textColor="@color/text_secondary"
+        android:gravity="center" android:lineSpacingMultiplier="1.5"
+        android:layout_marginBottom="56dp"/>
+
+    <!-- Snooze button -->
+    <Button android:id="@+id/btnAlarmSnooze"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:text="⏱  Snooze 1 hour"
+        android:textSize="15sp" android:textColor="@color/text_primary"
+        android:backgroundTint="@color/bg2"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Study Now / Stop button -->
+    <Button android:id="@+id/btnAlarmStop"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:text="📖  Study Now — Stop Alarm"
+        android:textSize="15sp" android:textColor="@color/black"
+        android:backgroundTint="@color/gold"/>
+
+</LinearLayout>

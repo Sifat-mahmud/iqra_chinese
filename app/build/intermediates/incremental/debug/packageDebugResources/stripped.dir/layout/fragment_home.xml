@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+
+        <!-- Logo + header card -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+
+                <!-- Logo row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="42dp" android:layout_height="42dp"
+                        android:text="学" android:textSize="21sp" android:textStyle="bold"
+                        android:gravity="center" android:background="@drawable/bg_logo"
+                        android:textColor="@color/black"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Iqra Chinese" android:textSize="17sp" android:textStyle="bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="HSK 1–6  ·  OFFLINE" android:textSize="10sp"
+                            android:textColor="@color/text_muted" android:letterSpacing="0.08"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:id="@+id/tvXP" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="⚡ 0"
+                            android:textSize="11sp" android:textStyle="bold" android:textColor="@color/gold"
+                            android:background="@drawable/bg_chip_gold" android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp" android:layout_marginEnd="6dp"/>
+                        <TextView android:id="@+id/tvStreak" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔥 1"
+                            android:textSize="11sp" android:textStyle="bold" android:textColor="@color/amber"
+                            android:background="@drawable/bg_chip_amber" android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Stats row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+                        android:background="@drawable/bg_stat" android:padding="10dp" android:layout_marginEnd="6dp">
+                        <TextView android:id="@+id/tvMastered" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0"
+                            android:textSize="24sp" android:textStyle="bold" android:textColor="@color/gold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="MASTERED" android:textSize="9sp" android:textColor="@color/text_muted"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+                        android:background="@drawable/bg_stat" android:padding="10dp">
+                        <TextView android:id="@+id/tvDaily" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="0m 00s"
+                            android:textSize="15sp" android:textStyle="bold" android:textColor="@color/jade"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="TODAY / 30m" android:textSize="9sp" android:textColor="@color/text_muted"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ProgressBar android:id="@+id/pbDaily"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent" android:layout_height="5dp"
+                    android:progressDrawable="@drawable/pb_daily" android:max="100"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Level cards -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="HSK LEVELS" android:textSize="10sp" android:textColor="@color/text_muted"
+            android:letterSpacing="0.12" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:id="@+id/llLevels" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"/>
+
+        <!-- Achievements -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACHIEVEMENTS" android:textSize="10sp" android:textColor="@color/text_muted"
+            android:letterSpacing="0.12" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:id="@+id/llAchievements" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

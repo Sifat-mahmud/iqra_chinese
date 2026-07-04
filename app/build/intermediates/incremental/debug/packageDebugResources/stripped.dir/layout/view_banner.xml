@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bannerOverlay"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#99000000"
+    android:visibility="gone"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="50dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:layout_margin="28dp"
+        app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="18dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Banner image (optional, hidden if no imageUrl) -->
+            <ImageView android:id="@+id/ivBannerImage"
+                android:layout_width="match_parent" android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:background="@color/bg3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <!-- Close button row -->
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="end"
+                    android:layout_marginBottom="4dp">
+                    <ImageButton android:id="@+id/btnBannerClose"
+                        android:layout_width="32dp" android:layout_height="32dp"
+                        android:src="@drawable/ic_close"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Close"
+                        app:tint="@color/text_muted"/>
+                </LinearLayout>
+
+                <!-- Title -->
+                <TextView android:id="@+id/tvBannerTitle"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="@color/gold"
+                    android:layout_marginBottom="8dp"
+                    tools:text="🎉 New content available!"/>
+
+                <!-- Message -->
+                <TextView android:id="@+id/tvBannerMessage"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textSize="14sp" android:textColor="@color/text_secondary"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginBottom="16dp"
+                    tools:text="We've added new vocabulary words. Check them out!"/>
+
+                <!-- Action button (optional) -->
+                <Button android:id="@+id/btnBannerAction"
+                    android:layout_width="match_parent" android:layout_height="48dp"
+                    android:text="Learn more"
+                    android:textSize="14sp" android:textColor="@color/black"
+                    android:backgroundTint="@color/gold"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

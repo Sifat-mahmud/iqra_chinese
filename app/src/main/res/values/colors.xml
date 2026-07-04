@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#07070F</color>
+    <color name="bg2">#0E0E1C</color>
+    <color name="bg3">#151526</color>
+    <color name="bg4">#1C1C30</color>
+    <color name="bg5">#242440</color>
+    <color name="border">#2A2848</color>
+    <color name="text_primary">#F2F0FF</color>
+    <color name="text_secondary">#9896C8</color>
+    <color name="text_muted">#4A4870</color>
+    <color name="gold">#F5C842</color>
+    <color name="amber">#FB923C</color>
+    <color name="jade">#3ECF8E</color>
+    <color name="ruby">#E8455A</color>
+    <color name="sapphire">#5B9CF6</color>
+    <color name="violet">#A78BFA</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card">#0E0E1C</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/bg">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/bg2"
+            app:menu="@menu/bottom_nav"
+            app:itemIconTint="@color/text_muted"
+            app:itemTextColor="@color/text_muted"
+            app:labelVisibilityMode="labeled"/>
+    </LinearLayout>
+
+    <!-- Banner overlay — hidden by default, shown over everything when a banner is available -->
+    <include android:id="@+id/bannerInclude" layout="@layout/view_banner"/>
+
+</FrameLayout>

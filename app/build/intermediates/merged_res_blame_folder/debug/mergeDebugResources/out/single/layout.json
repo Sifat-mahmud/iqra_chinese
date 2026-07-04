@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_sentence.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_sentence.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/item_achievement.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/item_achievement.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/item_group.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/item_group.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/item_level_progress.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/item_level_progress.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/item_level_card.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/item_level_card.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/activity_alarm.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/activity_alarm.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_groups.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_groups.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_home.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_auth.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_group_practice.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_group_practice.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_stats.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_stats.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_settings.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_practice.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_practice.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/view_banner.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/view_banner.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-mergeDebugResources-4:/layout/fragment_test.xml",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_test.xml"
+    }
+]

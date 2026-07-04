@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+            <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@drawable/ic_back" android:background="@drawable/bg_pill" android:padding="8dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Sentences"
+                android:textSize="16sp" android:textStyle="bold" android:textColor="@color/text_primary"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:layout_marginBottom="12dp">
+            <LinearLayout android:id="@+id/llPills" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="No sentences for this level."
+            android:gravity="center" android:textColor="@color/text_muted" android:textSize="14sp"
+            android:padding="40dp" android:visibility="gone"/>
+
+        <androidx.cardview.widget.CardView android:id="@+id/cardSent"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="18dp">
+                <TextView android:id="@+id/tvCounter" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="1/0"
+                    android:textSize="10sp" android:textColor="@color/text_muted"
+                    android:fontFamily="monospace" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvChar" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:lineSpacingMultiplier="1.4"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:id="@+id/tvPinyin" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="12sp" android:textColor="@color/violet"
+                    android:textStyle="italic" android:minHeight="18dp" android:layout_marginBottom="4dp"/>
+                <TextView android:id="@+id/tvMeaning" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="12sp" android:textColor="@color/text_secondary" android:minHeight="18dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="ℹ️  60% word match needed to advance"
+            android:textSize="11sp" android:textColor="@color/text_muted"
+            android:gravity="center" android:background="@drawable/bg_hint"
+            android:padding="10dp" android:layout_marginBottom="10dp"/>
+
+                <!-- Speak buttons -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <ImageButton android:id="@+id/btnSpeak"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:src="@drawable/ic_speak"
+                android:background="@drawable/bg_chip_gold"
+                android:padding="10dp"
+                android:contentDescription="Speak"/>
+            <ImageButton android:id="@+id/btnSpeakSlow"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:src="@drawable/ic_speak_slow"
+                android:background="@drawable/bg_hint"
+                android:padding="10dp"
+                android:contentDescription="Speak slowly"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <EditText android:id="@+id/etAnswer" android:layout_width="match_parent"
+            android:layout_height="52dp" android:background="@drawable/bg_input"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:hint="Type the English meaning…" android:textColorHint="@color/text_muted"
+            android:imeOptions="actionDone" android:inputType="text"
+            android:paddingHorizontal="16dp" android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnCheck" android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="Check ✓" android:textStyle="bold"
+                android:backgroundTint="@color/gold" android:textColor="@color/black"
+                android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnSkip" android:layout_width="80dp" android:layout_height="48dp"
+                android:text="Skip →" android:backgroundTint="@color/bg3"
+                android:textColor="@color/text_secondary" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
