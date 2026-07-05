@@ -1,11 +1,11 @@
-com.iqra.chinese.app-pngs-0 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\generated\res\pngs\debug
-com.iqra.chinese.app-res-1 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\generated\res\processDebugGoogleServices
-com.iqra.chinese.app-resValues-2 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\generated\res\resValues\debug
-com.iqra.chinese.app-packageDebugResources-3 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.iqra.chinese.app-packageDebugResources-4 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.iqra.chinese.app-debug-5 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.iqra.chinese.app-debug-6 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\src\debug\res
-com.iqra.chinese.app-main-7 C:\Git\iqra_chinese\IqraChinese-Firebase\iqra-final\app\src\main\res
+com.iqra.chinese.app-pngs-0 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\generated\res\pngs\debug
+com.iqra.chinese.app-res-1 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\generated\res\processDebugGoogleServices
+com.iqra.chinese.app-resValues-2 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\generated\res\resValues\debug
+com.iqra.chinese.app-packageDebugResources-3 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.iqra.chinese.app-packageDebugResources-4 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.iqra.chinese.app-debug-5 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.iqra.chinese.app-debug-6 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\src\debug\res
+com.iqra.chinese.app-main-7 C:\Git\iqra_chinese\IqraChinese-Firebase (1)\iqra-final\app\src\main\res
 com.iqra.chinese.app-ads-adservices-java-1.0.0-beta05-8 C:\Users\Administrator\.gradle\caches\transforms-3\0753e1b4d0e4c314c73525d5f2987b53\transformed\ads-adservices-java-1.0.0-beta05\res
 com.iqra.chinese.app-browser-1.4.0-9 C:\Users\Administrator\.gradle\caches\transforms-3\0d391052c921ed4ab304c2925d0976af\transformed\browser-1.4.0\res
 com.iqra.chinese.app-coordinatorlayout-1.1.0-10 C:\Users\Administrator\.gradle\caches\transforms-3\0dae522a43019c390542a07e3c3f3c51\transformed\coordinatorlayout-1.1.0\res

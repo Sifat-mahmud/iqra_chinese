@@ -73,7 +73,11 @@ class MainActivity : AppCompatActivity() {
     override fun onResume()  { super.onResume();  vm.startTimer() }
     override fun onPause()   { super.onPause();   vm.stopTimer()  }
 
-    override fun onDestroy() { super.onDestroy(); TtsManager.shutdown() }
+    override fun onDestroy() {
+        super.onDestroy()
+        TtsManager.shutdown()
+        bannerListener?.let { BannerManager.removeLiveListener(it) }
+    }
 
     private fun requestNotif() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
@@ -143,61 +147,82 @@ class MainActivity : AppCompatActivity() {
      * Runs on every app open / resume from background. Cached locally so it
      * also works offline using the last-fetched banner.
      */
+    private var bannerListener: com.google.firebase.database.ValueEventListener? = null
+    private var lastShownBannerId: String? = null
+
     private fun showBannerIfAvailable() {
-        lifecycleScope.launch {
-            val banner = BannerManager.fetchBanner(this@MainActivity) ?: return@launch
-
-            val bannerBinding = binding.bannerInclude
-            val overlay     = bannerBinding.bannerOverlay
-            val ivImage     = bannerBinding.ivBannerImage
-            val tvTitle     = bannerBinding.tvBannerTitle
-            val tvMessage   = bannerBinding.tvBannerMessage
-            val btnAction   = bannerBinding.btnBannerAction
-            val btnClose    = bannerBinding.btnBannerClose
-
-            tvTitle.text   = banner.title
-            tvMessage.text = banner.message
-
-            if (!banner.imageUrl.isNullOrEmpty()) {
-                ivImage.visibility = View.VISIBLE
-                ivImage.load(banner.imageUrl) {
-                    crossfade(true)
+        // Live listener fires immediately with current data on attach (handling
+        // the initial launch case), AND delivers any future pushes/updates while
+        // the app stays open — no restart needed for new banners to appear.
+        bannerListener = BannerManager.startLiveListener(this) { banner ->
+            runOnUiThread {
+                if (banner == null) {
+                    binding.bannerInclude.bannerOverlay.visibility = View.GONE
+                    lastShownBannerId = null
+                } else if (banner.id != lastShownBannerId) {
+                    // Only (re)show if it's a different banner than what's
+                    // currently displayed — avoids flicker on repeated syncs
+                    displayBanner(banner)
                 }
-            } else {
-                ivImage.visibility = View.GONE
             }
+        }
+    }
 
-            if (!banner.actionLabel.isNullOrEmpty() && !banner.actionUrl.isNullOrEmpty()) {
-                btnAction.visibility = View.VISIBLE
-                btnAction.text = banner.actionLabel
-                btnAction.setOnClickListener {
-                    try {
-                        startActivity(android.content.Intent(
-                            android.content.Intent.ACTION_VIEW,
-                            android.net.Uri.parse(banner.actionUrl)
-                        ))
-                    } catch (_: Exception) {}
-                    overlay.visibility = View.GONE
-                    BannerManager.dismiss(this@MainActivity, banner.id)
-                }
-            } else {
-                btnAction.visibility = View.GONE
+    private fun displayBanner(banner: com.iqra.chinese.firebase.BannerConfig) {
+        val bannerBinding = binding.bannerInclude
+        val overlay     = bannerBinding.bannerOverlay
+        val ivImage     = bannerBinding.ivBannerImage
+        val tvTitle     = bannerBinding.tvBannerTitle
+        val tvMessage   = bannerBinding.tvBannerMessage
+        val btnAction   = bannerBinding.btnBannerAction
+        val btnClose    = bannerBinding.btnBannerClose
+
+        tvTitle.text   = banner.title
+        tvMessage.text = banner.message
+
+        if (!banner.imageUrl.isNullOrEmpty()) {
+            ivImage.visibility = View.VISIBLE
+            ivImage.load(banner.imageUrl) {
+                crossfade(true)
             }
+        } else {
+            ivImage.visibility = View.GONE
+        }
 
-            btnClose.setOnClickListener {
+        if (!banner.actionLabel.isNullOrEmpty() && !banner.actionUrl.isNullOrEmpty()) {
+            btnAction.visibility = View.VISIBLE
+            btnAction.text = banner.actionLabel
+            btnAction.setOnClickListener {
+                try {
+                    startActivity(android.content.Intent(
+                        android.content.Intent.ACTION_VIEW,
+                        android.net.Uri.parse(banner.actionUrl)
+                    ))
+                } catch (_: Exception) {}
                 overlay.visibility = View.GONE
+                lastShownBannerId = null
                 BannerManager.dismiss(this@MainActivity, banner.id)
             }
-            // Tapping outside the card also dismisses without marking as permanently seen
-            // (re-shows on next launch in case user wants to see it again)
-            overlay.setOnClickListener {
-                overlay.visibility = View.GONE
-            }
-
-            overlay.visibility = View.VISIBLE
-            FirebaseManager.logEvent("banner_shown", android.os.Bundle().apply {
-                putString("banner_id", banner.id)
-            })
+        } else {
+            btnAction.visibility = View.GONE
         }
+
+        btnClose.setOnClickListener {
+            overlay.visibility = View.GONE
+            lastShownBannerId = null
+            BannerManager.dismiss(this@MainActivity, banner.id)
+        }
+        // Tapping outside the card also dismisses without marking as permanently seen
+        // (re-shows on next launch in case user wants to see it again)
+        overlay.setOnClickListener {
+            overlay.visibility = View.GONE
+            lastShownBannerId = null
+        }
+
+        overlay.visibility = View.VISIBLE
+        lastShownBannerId = banner.id
+        FirebaseManager.logEvent("banner_shown", android.os.Bundle().apply {
+            putString("banner_id", banner.id)
+        })
     }
 }

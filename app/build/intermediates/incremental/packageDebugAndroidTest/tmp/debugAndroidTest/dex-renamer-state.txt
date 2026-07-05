@@ -1,0 +1,4 @@
+#Tue Jun 16 02:52:04 CST 2026
+base.0=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

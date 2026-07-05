@@ -2,6 +2,9 @@ package com.iqra.chinese.firebase
 
 import android.content.Context
 import androidx.core.content.edit
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
@@ -74,12 +77,7 @@ object BannerManager {
         val remote = runCatching {
             val snapshot = db.get().await()
             if (!snapshot.exists()) return@runCatching null
-            val json = JSONObject().apply {
-                snapshot.children.forEach { child ->
-                    put(child.key ?: return@forEach, child.value)
-                }
-            }
-            json
+            snapshotToJson(snapshot)
         }.getOrNull()
 
         // Cache whatever we got (even if null result means "no banner configured")
@@ -92,6 +90,48 @@ object BannerManager {
             runCatching { JSONObject(it) }.getOrNull()
         } ?: return null
 
+        return parseConfig(json, prefs)
+    }
+
+    /**
+     * Attaches a live listener to /banners/active so that if an admin pushes a
+     * NEW or UPDATED banner while the app is open, it is delivered immediately —
+     * no app restart needed.
+     *
+     * [onBanner] is called with the new banner config whenever it changes and
+     * passes the dismissed/disabled checks, or null if it should be hidden.
+     * Caller is responsible for removing the listener (see [removeLiveListener])
+     * when the host is destroyed.
+     *
+     * Returns the listener handle so it can be detached later.
+     */
+    fun startLiveListener(ctx: Context, onBanner: (BannerConfig?) -> Unit): ValueEventListener {
+        val prefs = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        val listener = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (!snapshot.exists()) { onBanner(null); return }
+                val json = snapshotToJson(snapshot)
+                prefs.edit { putString(KEY_CACHED, json.toString()) }
+                onBanner(parseConfig(json, prefs))
+            }
+            override fun onCancelled(error: DatabaseError) { /* offline-safe: ignore */ }
+        }
+        db.addValueEventListener(listener)
+        return listener
+    }
+
+    /** Detach a listener started with [startLiveListener]. Call in onDestroy(). */
+    fun removeLiveListener(listener: ValueEventListener) {
+        db.removeEventListener(listener)
+    }
+
+    private fun snapshotToJson(snapshot: DataSnapshot): JSONObject = JSONObject().apply {
+        snapshot.children.forEach { child ->
+            put(child.key ?: return@forEach, child.value)
+        }
+    }
+
+    private fun parseConfig(json: JSONObject, prefs: android.content.SharedPreferences): BannerConfig? {
         val config = runCatching {
             BannerConfig(
                 id          = json.optString("id", ""),

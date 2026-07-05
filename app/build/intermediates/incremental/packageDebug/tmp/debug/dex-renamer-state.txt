@@ -1,14 +1,14 @@
-#Tue Jun 16 02:11:51 CST 2026
-base.0=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.4=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.5=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.6=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.7=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.8=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.9=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Tue Jun 16 02:51:59 CST 2026
+base.0=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.4=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.5=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.6=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.7=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.8=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.9=C\:\\Git\\iqra_chinese\\IqraChinese-Firebase (1)\\iqra-final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=10/classes.dex
