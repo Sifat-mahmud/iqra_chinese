@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,6 +55,9 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final ProgressBar pbDaily;
 
   @NonNull
+  public final SeekBar seekGoal;
+
+  @NonNull
   public final SwitchMaterial switchMeaning;
 
   @NonNull
@@ -87,6 +91,9 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final TextView tvDeviceOs;
 
   @NonNull
+  public final TextView tvGoalLabel;
+
+  @NonNull
   public final TextView tvStreak;
 
   @NonNull
@@ -99,12 +106,13 @@ public final class FragmentSettingsBinding implements ViewBinding {
       @NonNull Button btnResetProgress, @NonNull Button btnRetryTts,
       @NonNull Button btnSaveDayStart, @NonNull Button btnSignInOut, @NonNull Button btnSyncNow,
       @NonNull Button btnTestTts, @NonNull NumberPicker npHour, @NonNull NumberPicker npMinute,
-      @NonNull ProgressBar pbDaily, @NonNull SwitchMaterial switchMeaning,
-      @NonNull SwitchMaterial switchPinyin, @NonNull TextView tvAccountStatus,
-      @NonNull TextView tvAlarmCountdown, @NonNull TextView tvAlarmPhase,
-      @NonNull TextView tvAppInfo, @NonNull TextView tvBackupStatus, @NonNull TextView tvBest,
-      @NonNull TextView tvDaily, @NonNull TextView tvDayStartConfirm, @NonNull TextView tvDeviceOs,
-      @NonNull TextView tvStreak, @NonNull TextView tvTtsInfo, @NonNull TextView tvXP) {
+      @NonNull ProgressBar pbDaily, @NonNull SeekBar seekGoal,
+      @NonNull SwitchMaterial switchMeaning, @NonNull SwitchMaterial switchPinyin,
+      @NonNull TextView tvAccountStatus, @NonNull TextView tvAlarmCountdown,
+      @NonNull TextView tvAlarmPhase, @NonNull TextView tvAppInfo, @NonNull TextView tvBackupStatus,
+      @NonNull TextView tvBest, @NonNull TextView tvDaily, @NonNull TextView tvDayStartConfirm,
+      @NonNull TextView tvDeviceOs, @NonNull TextView tvGoalLabel, @NonNull TextView tvStreak,
+      @NonNull TextView tvTtsInfo, @NonNull TextView tvXP) {
     this.rootView = rootView;
     this.btnResetAll = btnResetAll;
     this.btnResetProgress = btnResetProgress;
@@ -116,6 +124,7 @@ public final class FragmentSettingsBinding implements ViewBinding {
     this.npHour = npHour;
     this.npMinute = npMinute;
     this.pbDaily = pbDaily;
+    this.seekGoal = seekGoal;
     this.switchMeaning = switchMeaning;
     this.switchPinyin = switchPinyin;
     this.tvAccountStatus = tvAccountStatus;
@@ -127,6 +136,7 @@ public final class FragmentSettingsBinding implements ViewBinding {
     this.tvDaily = tvDaily;
     this.tvDayStartConfirm = tvDayStartConfirm;
     this.tvDeviceOs = tvDeviceOs;
+    this.tvGoalLabel = tvGoalLabel;
     this.tvStreak = tvStreak;
     this.tvTtsInfo = tvTtsInfo;
     this.tvXP = tvXP;
@@ -219,6 +229,12 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.seekGoal;
+      SeekBar seekGoal = ViewBindings.findChildViewById(rootView, id);
+      if (seekGoal == null) {
+        break missingId;
+      }
+
       id = R.id.switchMeaning;
       SwitchMaterial switchMeaning = ViewBindings.findChildViewById(rootView, id);
       if (switchMeaning == null) {
@@ -285,6 +301,12 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvGoalLabel;
+      TextView tvGoalLabel = ViewBindings.findChildViewById(rootView, id);
+      if (tvGoalLabel == null) {
+        break missingId;
+      }
+
       id = R.id.tvStreak;
       TextView tvStreak = ViewBindings.findChildViewById(rootView, id);
       if (tvStreak == null) {
@@ -305,9 +327,9 @@ public final class FragmentSettingsBinding implements ViewBinding {
 
       return new FragmentSettingsBinding((ScrollView) rootView, btnResetAll, btnResetProgress,
           btnRetryTts, btnSaveDayStart, btnSignInOut, btnSyncNow, btnTestTts, npHour, npMinute,
-          pbDaily, switchMeaning, switchPinyin, tvAccountStatus, tvAlarmCountdown, tvAlarmPhase,
-          tvAppInfo, tvBackupStatus, tvBest, tvDaily, tvDayStartConfirm, tvDeviceOs, tvStreak,
-          tvTtsInfo, tvXP);
+          pbDaily, seekGoal, switchMeaning, switchPinyin, tvAccountStatus, tvAlarmCountdown,
+          tvAlarmPhase, tvAppInfo, tvBackupStatus, tvBest, tvDaily, tvDayStartConfirm, tvDeviceOs,
+          tvGoalLabel, tvStreak, tvTtsInfo, tvXP);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

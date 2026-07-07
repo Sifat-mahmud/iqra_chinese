@@ -38,6 +38,9 @@ public final class FragmentStatsBinding implements ViewBinding {
   public final ProgressBar pbPassFail;
 
   @NonNull
+  public final BarChartView timeChart;
+
+  @NonNull
   public final TextView tvAccuracy;
 
   @NonNull
@@ -62,20 +65,25 @@ public final class FragmentStatsBinding implements ViewBinding {
   public final TextView tvStreak;
 
   @NonNull
+  public final TextView tvTotalTimeStudied;
+
+  @NonNull
   public final TextView tvXP;
 
   private FragmentStatsBinding(@NonNull ScrollView rootView, @NonNull BarChartView barChart,
       @NonNull LinearLayout llLevelProgress, @NonNull LinearLayout llRecent,
-      @NonNull ProgressBar pbDaily, @NonNull ProgressBar pbPassFail, @NonNull TextView tvAccuracy,
-      @NonNull TextView tvAttempts, @NonNull TextView tvBest, @NonNull TextView tvDaily,
-      @NonNull TextView tvFail, @NonNull TextView tvMastered, @NonNull TextView tvPass,
-      @NonNull TextView tvStreak, @NonNull TextView tvXP) {
+      @NonNull ProgressBar pbDaily, @NonNull ProgressBar pbPassFail,
+      @NonNull BarChartView timeChart, @NonNull TextView tvAccuracy, @NonNull TextView tvAttempts,
+      @NonNull TextView tvBest, @NonNull TextView tvDaily, @NonNull TextView tvFail,
+      @NonNull TextView tvMastered, @NonNull TextView tvPass, @NonNull TextView tvStreak,
+      @NonNull TextView tvTotalTimeStudied, @NonNull TextView tvXP) {
     this.rootView = rootView;
     this.barChart = barChart;
     this.llLevelProgress = llLevelProgress;
     this.llRecent = llRecent;
     this.pbDaily = pbDaily;
     this.pbPassFail = pbPassFail;
+    this.timeChart = timeChart;
     this.tvAccuracy = tvAccuracy;
     this.tvAttempts = tvAttempts;
     this.tvBest = tvBest;
@@ -84,6 +92,7 @@ public final class FragmentStatsBinding implements ViewBinding {
     this.tvMastered = tvMastered;
     this.tvPass = tvPass;
     this.tvStreak = tvStreak;
+    this.tvTotalTimeStudied = tvTotalTimeStudied;
     this.tvXP = tvXP;
   }
 
@@ -144,6 +153,12 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.timeChart;
+      BarChartView timeChart = ViewBindings.findChildViewById(rootView, id);
+      if (timeChart == null) {
+        break missingId;
+      }
+
       id = R.id.tvAccuracy;
       TextView tvAccuracy = ViewBindings.findChildViewById(rootView, id);
       if (tvAccuracy == null) {
@@ -192,6 +207,12 @@ public final class FragmentStatsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvTotalTimeStudied;
+      TextView tvTotalTimeStudied = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotalTimeStudied == null) {
+        break missingId;
+      }
+
       id = R.id.tvXP;
       TextView tvXP = ViewBindings.findChildViewById(rootView, id);
       if (tvXP == null) {
@@ -199,8 +220,8 @@ public final class FragmentStatsBinding implements ViewBinding {
       }
 
       return new FragmentStatsBinding((ScrollView) rootView, barChart, llLevelProgress, llRecent,
-          pbDaily, pbPassFail, tvAccuracy, tvAttempts, tvBest, tvDaily, tvFail, tvMastered, tvPass,
-          tvStreak, tvXP);
+          pbDaily, pbPassFail, timeChart, tvAccuracy, tvAttempts, tvBest, tvDaily, tvFail,
+          tvMastered, tvPass, tvStreak, tvTotalTimeStudied, tvXP);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

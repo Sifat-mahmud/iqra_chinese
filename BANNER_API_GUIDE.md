@@ -106,7 +106,77 @@ GET https://iqra-chinese-default-rtdb.firebaseio.com/banners/active.json
 - User dismissing via **X** stores the `id` locally; same `id` won't show again on that device
 - User tapping outside the card dismisses for that session only (shows again next launch)
 
-## 6. View/Dismiss Tracking
+## 7. Video Banner Examples
+
+### YouTube banner (Option A — thumbnail + opens YouTube)
+```json
+{
+  "id": "video_promo_001",
+  "title": "🎬 Watch: How to Study HSK",
+  "message": "Check out our new tutorial on mastering HSK vocabulary fast!",
+  "videoUrl": "https://youtu.be/YOUR_VIDEO_ID",
+  "actionLabel": "",
+  "actionUrl": "",
+  "feedback": false,
+  "enabled": true
+}
+```
+App auto-extracts the YouTube thumbnail and shows a red "▶ Watch on YouTube" button.
+
+### Inline video banner (Option B — plays inside the popup)
+```json
+{
+  "id": "inline_video_001",
+  "title": "📹 Quick HSK Tip",
+  "message": "Watch this 30-second tip to boost your score!",
+  "videoUrl": "https://your-cdn.com/tip-video.mp4",
+  "feedback": false,
+  "enabled": true
+}
+```
+Any non-YouTube direct video URL (`.mp4`, `.webm`, etc.) plays inline in the banner card.
+
+## 8. Feedback Form Examples
+
+### Simple feedback banner
+```json
+{
+  "id": "feedback_june_2026",
+  "title": "💬 Quick Question",
+  "message": "Help us improve Iqra Chinese!",
+  "feedback": true,
+  "feedbackQuestion": "What feature would you like us to add next?",
+  "enabled": true
+}
+```
+
+### Combined: image + feedback
+```json
+{
+  "id": "survey_001",
+  "title": "📊 We want your opinion!",
+  "message": "Tell us how you're finding the app.",
+  "imageUrl": "https://drive.google.com/uc?export=view&id=YOUR_FILE_ID",
+  "feedback": true,
+  "feedbackQuestion": "How would you rate your learning experience so far?",
+  "actionLabel": "See all features",
+  "actionUrl": "https://yourwebsite.com/features",
+  "enabled": true
+}
+```
+
+### Reading feedback responses (Postman GET)
+```
+GET https://iqra-chinese-default-rtdb.firebaseio.com/banners/feedback/feedback_june_2026.json?auth=YOUR_DATABASE_SECRET
+```
+Returns all responses keyed by user uid (or "anon" for non-logged-in users):
+```json
+{
+  "uid123": { "response": "More sentence examples!", "uid": "uid123", "ts": 1718123456789 },
+  "anon":   { "response": "Love the app!", "uid": "anon", "ts": 1718123400000 }
+}
+```
+
 
 Every time a user dismisses (taps X on) a banner, the app increments a counter at:
 ```
@@ -118,7 +188,7 @@ To check how many times a banner was dismissed:
 GET https://iqra-chinese-default-rtdb.firebaseio.com/banners/stats/promo_2026_07/dismissCount.json
 ```
 
-**Required rules update** — add this so the app can write dismiss counts:
+**Required rules update** — add this so the app can write dismiss counts and feedback:
 ```json
 {
   "rules": {
@@ -131,7 +201,8 @@ GET https://iqra-chinese-default-rtdb.firebaseio.com/banners/stats/promo_2026_07
     "banners": {
       ".read": true,
       "active": { ".write": false },
-      "stats": { ".write": true }
+      "stats":    { ".write": true },
+      "feedback": { ".write": true }
     }
   }
 }

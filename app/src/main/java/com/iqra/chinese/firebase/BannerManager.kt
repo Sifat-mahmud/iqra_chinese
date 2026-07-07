@@ -49,8 +49,11 @@ data class BannerConfig(
     val title: String,
     val message: String,
     val imageUrl: String? = null,
+    val videoUrl: String? = null,        // direct video URL or YouTube URL
     val actionLabel: String? = null,
     val actionUrl: String? = null,
+    val feedback: Boolean = false,       // if true, show feedback input field
+    val feedbackQuestion: String? = null, // question shown above the feedback field
     val enabled: Boolean = true
 )
 
@@ -134,13 +137,16 @@ object BannerManager {
     private fun parseConfig(json: JSONObject, prefs: android.content.SharedPreferences): BannerConfig? {
         val config = runCatching {
             BannerConfig(
-                id          = json.optString("id", ""),
-                title       = json.optString("title", ""),
-                message     = json.optString("message", ""),
-                imageUrl    = json.optString("imageUrl", "").ifEmpty { null },
-                actionLabel = json.optString("actionLabel", "").ifEmpty { null },
-                actionUrl   = json.optString("actionUrl", "").ifEmpty { null },
-                enabled     = json.optBoolean("enabled", true)
+                id               = json.optString("id", ""),
+                title            = json.optString("title", ""),
+                message          = json.optString("message", ""),
+                imageUrl         = json.optString("imageUrl", "").ifEmpty { null },
+                videoUrl         = json.optString("videoUrl", "").ifEmpty { null },
+                actionLabel      = json.optString("actionLabel", "").ifEmpty { null },
+                actionUrl        = json.optString("actionUrl", "").ifEmpty { null },
+                feedback         = json.optBoolean("feedback", false),
+                feedbackQuestion = json.optString("feedbackQuestion", "").ifEmpty { null },
+                enabled          = json.optBoolean("enabled", true)
             )
         }.getOrNull() ?: return null
 
@@ -158,6 +164,28 @@ object BannerManager {
         ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit { putString(KEY_DISMISSED, bannerId) }
         incrementViewCount(bannerId)
+    }
+
+    /**
+     * Saves a user's feedback response to:
+     *   /banners/feedback/{bannerId}/{uid_or_anon}/{timestamp}
+     *     response: "user's answer text"
+     *     uid: "user uid or anonymous"
+     *     ts: epoch ms
+     */
+    fun submitFeedback(bannerId: String, response: String, uid: String?) {
+        val safeId   = bannerId.replace(".", "_").replace("#", "_")
+            .replace("$", "_").replace("[", "_").replace("]", "_").replace("/", "_")
+        val userKey  = uid?.ifEmpty { "anon" } ?: "anon"
+        val ref      = Firebase.database("https://iqra-chinese-default-rtdb.firebaseio.com")
+            .reference
+            .child("banners").child("feedback").child(safeId).child(userKey)
+
+        ref.setValue(mapOf(
+            "response" to response,
+            "uid"      to userKey,
+            "ts"       to System.currentTimeMillis()
+        ))
     }
 
     /**

@@ -4,40 +4,16 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_9700_8981.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/anim_slide_in_back.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/anim/slide_in_back.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/layout_view_banner.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/layout/view_banner.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_speak.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_speak.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8dd1_6b65.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8dd1_6b65.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9ad8_5174.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_9ad8_5174.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5408_4f5c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5408_4f5c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f71_54cd.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5f71_54cd.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5206_6790.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5206_6790.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_speak.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_speak.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e3b_89c2.mp3.flat",
@@ -60,24 +36,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_6ca1_6709.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input_ok.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input_ok.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e2d_56fd.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e2d_56fd.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00_8d77.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00_8d77.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_559c_6b22.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_559c_6b22.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_62c5_5fc3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_62c5_5fc3.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00_8d77.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00_8d77.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5973_513f.mp3.flat",
@@ -88,36 +52,12 @@
         "source": "com.iqra.chinese.app-main-7:/menu/bottom_nav.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6590_7136.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6590_7136.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_89e3_51b3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_89e3_51b3.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7279_522b.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7279_522b.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_pb_pass_fail.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/pb_pass_fail.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5173.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5173.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8df3_821e.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8df3_821e.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6811.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6811.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5feb.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5feb.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6548_7387.mp3.flat",
@@ -128,72 +68,32 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_513f_5b50.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ade_4e89.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7ade_4e89.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_606c_9759.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_606c_9759.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5929_6c14.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5929_6c14.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_94f6_884c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_94f6_884c.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/mipmap-mdpi_ic_launcher.png.flat",
         "source": "com.iqra.chinese.app-main-7:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_94f6_884c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_94f6_884c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9c7c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_9c7c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d35.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8d35.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e2e.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5e2e.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_settings.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/fragment_settings.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e03.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e03.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cc.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_91cc.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6211.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6211.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_665a_4e0a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_665a_4e0a.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_pill.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/bg_pill.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_665a_4e0a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_665a_4e0a.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6211.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6211.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_stats.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_stats.xml"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cc.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_91cc.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_600e_4e48.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_600e_4e48.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_test.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_test.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e70.mp3.flat",
@@ -204,22 +104,6 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_73af_5883.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_624b_673a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_624b_673a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ec0_4e48.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4ec0_4e48.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f52_7eb3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5f52_7eb3.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_54ea_91cc.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_54ea_91cc.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6666_6da9.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6666_6da9.mp3"
     },
@@ -228,24 +112,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_8473_8564.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_53d1_5c55.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_53d1_5c55.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fdb.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8fdb.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_65b0.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_65b0.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_logo.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_logo.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6765.mp3.flat",
@@ -260,44 +132,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_5f00.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_70ed.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_70ed.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_99a5_90c1.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_99a5_90c1.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_pb_daily.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/pb_daily.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cd_8981_0032.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_91cd_8981_0032.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6162.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6162.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e3d_5b50.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5e3d_5b50.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5c71.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5c71.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_63a8_7406.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_63a8_7406.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5988_5988.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5988_5988.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b_96e8.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b_96e8.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5de6.mp3.flat",
@@ -310,14 +150,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_72d7.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_72d7.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_badge.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_badge.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_95ee_9898.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_95ee_9898.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/mipmap-hdpi_ic_launcher_round.png.flat",
@@ -336,88 +168,36 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_73b0_5728.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60c6_6005.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_60c6_6005.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f60_4eec.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4f60_4eec.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_524d.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_524d.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_873f_8712.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_873f_8712.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_751f_6c14.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_751f_6c14.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8305_585e_987f_5f00.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8305_585e_987f_5f00.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_96be_8fc7.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_96be_8fc7.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00_822c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00_822c.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_chip_amber.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/bg_chip_amber.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ee7_627f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7ee7_627f.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5403.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5403.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6267_884c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6267_884c.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5730_94c1.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5730_94c1.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_groups.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_groups.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6267_884c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6267_884c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f11_606f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4f11_606f.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input_err.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input_err.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_539f_5219.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_539f_5219.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bbe_9986.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5bbe_9986.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_7.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_7.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba1_5212.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8ba1_5212.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51b7.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_51b7.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7814_7a76.mp3.flat",
@@ -426,18 +206,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6c34.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6c34.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9001.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_9001.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8bf4.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8bf4.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_767e.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_767e.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ed6_4eec.mp3.flat",
@@ -456,14 +224,6 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_60f3.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fd8.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8fd8.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7535_8111.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7535_8111.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_672c_8d28.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_672c_8d28.mp3"
     },
@@ -472,116 +232,48 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_5e74.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_996d.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_996d.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bf9_005f_0032.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5bf9_005f_0032.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_82b1.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_82b1.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60c5_51b5.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_60c5_51b5.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/anim_slide_in.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/anim/slide_in.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5531_6b4c.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5531_6b4c.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51fa.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_51fa.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6f02_4eae.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6f02_4eae.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_speak_slow.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_speak_slow.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51b3_5b9a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_51b3_5b9a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5230.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5230.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7406_8bba.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7406_8bba.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e5d.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e5d.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0a_6d77.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e0a_6d77.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_65e5.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_65e5.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_chip_gold.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_chip_gold.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_78c5_7934.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_78c5_7934.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e2f_8e85.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8e2f_8e85.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f60.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4f60.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ecf_9a8c.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7ecf_9a8c.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6c24_6c32.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6c24_6c32.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_5.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_516b.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_516b.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60b1_607b.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_60b1_607b.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_53f3.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_53f3.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_65f6_5019.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_65f6_5019.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_540e.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_540e.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cd_8981.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_91cd_8981.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_hint.xml.flat",
@@ -608,24 +300,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_611f_77e5.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_auth.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/fragment_auth.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_stat.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/bg_stat.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5a49_8f6c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5a49_8f6c.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5317_4eac.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5317_4eac.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_751f_75c5.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_751f_75c5.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_89c9_5f97.mp3.flat",
@@ -644,16 +324,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_7ec8_4e8e.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_settings.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_settings.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_80fd.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_80fd.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_84ec_52c3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_84ec_52c3.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_953b_70bc.mp3.flat",
@@ -664,12 +336,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_8e49_8dce.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5de5_4f5c.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5de5_4f5c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s2_3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s2_3.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/layout_item_achievement.xml.flat",
@@ -680,32 +348,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_6279_5224.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e2e_52a9.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5e2e_52a9.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ed6.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4ed6.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_9163_7545.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_9163_7545.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5ba2_89c2.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5ba2_89c2.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8868_793a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8868_793a.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fd9.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8fd9.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6e38_6cf3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6e38_6cf3.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8eab_4f53.mp3.flat",
@@ -716,24 +364,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_611f_89c9.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_540d_5b57.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_540d_5b57.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_667a_6167.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_667a_6167.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5b66_751f.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5b66_751f.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7535_89c6.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7535_89c6.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d28_91cf.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8d28_91cf.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fa9_8bc1.mp3.flat",
@@ -756,52 +392,24 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_5ba1_7f8e.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_sentences.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/ic_sentences.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_dot_red.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/dot_red.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e1f_8e70.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8e1f_8e70.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5df2_7ecf.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5df2_7ecf.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5979.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5979.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8c41_7136.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8c41_7136.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_test.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/fragment_test.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7684.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7684.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6709.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6709.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fd0_52a8.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8fd0_52a8.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_1.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8c22_8c22.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8c22_8c22.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_62bd_8c61.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_62bd_8c61.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_62a4_7167.mp3.flat",
@@ -812,10 +420,6 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_8bc4_4ef7.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5047_8bbe.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5047_8bbe.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_95ee.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_95ee.mp3"
     },
@@ -824,12 +428,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_4fbf_5b9c.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_670b_53cb.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_670b_53cb.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/color_nav_selector.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/color/nav_selector.xml"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s4_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s4_1.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6240_4ee5.mp3.flat",
@@ -848,16 +448,16 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_59d0_59d0.mp3"
     },
     {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s5_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s5_1.mp3"
+    },
+    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8def.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8def.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_542c.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_542c.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_77e5_9053.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_77e5_9053.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_dot_green.xml.flat",
@@ -868,40 +468,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_56db.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_597d.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_597d.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_4e3a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_4e3a.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e86.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e86.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9a8c_8bc1.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_9a8c_8bc1.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_76f8_4fe1.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_76f8_4fe1.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5927.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5927.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d77_5e8a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8d77_5e8a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_97f3_4e50.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_97f3_4e50.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5343.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5343.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8bf7.mp3.flat",
@@ -924,20 +496,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_76f4_89c9.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51c6_5907.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_51c6_5907.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7a81_7136.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7a81_7136.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6708.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6708.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.iqra.chinese.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7a81_7136.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7a81_7136.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8981.mp3.flat",
@@ -948,72 +512,24 @@
         "source": "com.iqra.chinese.app-main-7:/layout/item_level_progress.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_pb_word.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/pb_word.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input.xml"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s4_2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s4_2.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6211_4eec.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6211_4eec.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ef7_503c_89c2.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4ef7_503c_89c2.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bb6.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5bb6.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ea4_6d41.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4ea4_6d41.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d85_5e02.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8d85_5e02.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_673a_4f1a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_673a_4f1a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9053_5fb7.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_9053_5fb7.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e40_8e9e.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8e40_8e9e.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5341.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5341.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_918d_9190_704c_9876.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_918d_9190_704c_9876.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f46_662f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4f46_662f.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_2.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_home.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/ic_home.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e09.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e09.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_94b1.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_94b1.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5a46_5a11.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5a46_5a11.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e8c.mp3.flat",
@@ -1024,24 +540,12 @@
         "source": "com.iqra.chinese.app-main-7:/layout/item_group.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f1a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4f1a.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_stats.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/layout/fragment_stats.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_516c_53f8.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_516c_53f8.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_90ae_5c40.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_90ae_5c40.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8c01.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8c01.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5efa_7acb.mp3.flat",
@@ -1052,24 +556,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_53ef_80fd.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_8bc6.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_8bc6.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8001_5e08.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8001_5e08.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_practice.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/fragment_practice.xml"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7761_89c9.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7761_89c9.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ece.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4ece.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_90a3.mp3.flat",
@@ -1078,14 +570,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b_5348.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b_5348.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_533b_9662.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_533b_9662.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56e0_4e3a.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_56e0_4e3a.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8083_7a46.mp3.flat",
@@ -1104,10 +588,6 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e0d.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6dcb_6f13.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6dcb_6f13.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_59b9_59b9.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_59b9_59b9.mp3"
     },
@@ -1124,20 +604,8 @@
         "source": "com.iqra.chinese.app-main-7:/navigation/nav_graph.xml"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_501f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_501f.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_98de_673a.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_98de_673a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4eba.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4eba.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_53bb.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_53bb.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_591a_5c11.mp3.flat",
@@ -1148,16 +616,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_5f88.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_card.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/drawable/bg_card.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60f3_8c61.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_60f3_8c61.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_4.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_4.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_76ee_6807.mp3.flat",
@@ -1168,24 +628,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_542f_53d1.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_63d0_9ad8.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_63d0_9ad8.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e0c_8e87.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8e0c_8e87.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_591a.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_591a.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b_96ea.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b_96ea.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_notification.xml.flat",
@@ -1208,16 +656,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_4f60_597d.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f1f_5f1f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5f1f_5f1f.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_close.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/drawable/ic_close.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_521b_65b0.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_521b_65b0.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_611f_5192.mp3.flat",
@@ -1228,28 +668,12 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_9ad8.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_603b_7ed3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_603b_7ed3.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_item_level_card.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/item_level_card.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fa9_8bba.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8fa9_8bba.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5b66_6821.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5b66_6821.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5b66_4e60.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5b66_4e60.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_sentence.xml.flat",
-        "source": "com.iqra.chinese.app-main-7:/layout/fragment_sentence.xml"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_group_practice.xml.flat",
@@ -1270,10 +694,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6f78_7136.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6f78_7136.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7edd_4f26.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7edd_4f26.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6539_9769.mp3.flat",
@@ -1304,16 +724,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_7b56_7565.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5496_5561.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5496_5561.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4fee_7406.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4fee_7406.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_660e_5929.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_660e_5929.mp3"
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s2_5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s2_5.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5c0f.mp3.flat",
@@ -1322,18 +734,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/layout_activity_alarm.xml.flat",
         "source": "com.iqra.chinese.app-main-7:/layout/activity_alarm.xml"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_627e.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_627e.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56de.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_56de.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_77e5.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_77e5.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_77db_76fe.mp3.flat",
@@ -1348,6 +748,750 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_54e5_54e5.mp3"
     },
     {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_662f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_662f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ba1_7406.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7ba1_7406.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e5f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e5f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_81ea_884c_8f66.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_81ea_884c_8f66.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bf9_4e0d_8d77.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5bf9_4e0d_8d77.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e0c_671b.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5e0c_671b.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e86_89e3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e86_89e3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_521b_9020.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_521b_9020.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56fe_4e66_9986.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_56fe_4e66_9986.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_770b.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_770b.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6ca1_5173_7cfb.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6ca1_5173_7cfb.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e94_8be5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5e94_8be5.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_592a_9633.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_592a_9633.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_903b_8f91.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_903b_8f91.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5c11.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5c11.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7f31_7efb.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7f31_7efb.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0a_5348.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0a_5348.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/anim_slide_in_back.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/anim/slide_in_back.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9ad8_5174.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_9ad8_5174.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5408_4f5c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5408_4f5c.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f71_54cd.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5f71_54cd.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5206_6790.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5206_6790.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input_ok.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input_ok.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e2d_56fd.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e2d_56fd.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_62c5_5fc3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_62c5_5fc3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6590_7136.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6590_7136.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_89e3_51b3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_89e3_51b3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7279_522b.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7279_522b.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_pb_pass_fail.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/pb_pass_fail.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5173.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5173.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5feb.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5feb.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ade_4e89.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7ade_4e89.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_606c_9759.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_606c_9759.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5929_6c14.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5929_6c14.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9c7c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_9c7c.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d35.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8d35.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_8.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_8.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e2e.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5e2e.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_settings.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e03.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e03.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_stats.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_stats.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_test.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_test.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_624b_673a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_624b_673a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ec0_4e48.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4ec0_4e48.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f52_7eb3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5f52_7eb3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_54ea_91cc.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_54ea_91cc.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_53d1_5c55.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_53d1_5c55.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_logo.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_logo.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_99a5_90c1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_99a5_90c1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_70ed.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_70ed.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cd_8981_0032.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_91cd_8981_0032.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6162.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6162.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5c71.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5c71.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_63a8_7406.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_63a8_7406.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5988_5988.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5988_5988.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b_96e8.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b_96e8.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_badge.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_badge.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_95ee_9898.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_95ee_9898.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60c6_6005.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_60c6_6005.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f60_4eec.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4f60_4eec.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_873f_8712.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_873f_8712.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8305_585e_987f_5f00.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8305_585e_987f_5f00.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00_822c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00_822c.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ee7_627f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7ee7_627f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5403.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5403.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_groups.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_groups.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f11_606f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4f11_606f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input_err.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input_err.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_539f_5219.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_539f_5219.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bbe_9986.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5bbe_9986.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51b7.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_51b7.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9001.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_9001.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8bf4.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8bf4.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_767e.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_767e.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fd8.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8fd8.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7535_8111.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7535_8111.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_996d.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_996d.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s2_4.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s2_4.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_82b1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_82b1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60c5_51b5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_60c5_51b5.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/anim_slide_in.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/anim/slide_in.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51fa.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_51fa.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_speak_slow.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_speak_slow.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51b3_5b9a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_51b3_5b9a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5230.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5230.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e5d.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e5d.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_65e5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_65e5.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_chip_gold.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_chip_gold.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e2f_8e85.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8e2f_8e85.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f60.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4f60.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6c24_6c32.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6c24_6c32.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60b1_607b.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_60b1_607b.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_65f6_5019.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_65f6_5019.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_91cd_8981.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_91cd_8981.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_auth.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5a49_8f6c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5a49_8f6c.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_751f_75c5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_751f_75c5.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_settings.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s1_6.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s1_6.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_84ec_52c3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_84ec_52c3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5de5_4f5c.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5de5_4f5c.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e2e_52a9.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5e2e_52a9.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ed6.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4ed6.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5ba2_89c2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5ba2_89c2.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8868_793a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8868_793a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6e38_6cf3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6e38_6cf3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_540d_5b57.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_540d_5b57.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_667a_6167.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_667a_6167.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d28_91cf.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8d28_91cf.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_ic_sentences.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/ic_sentences.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_dot_red.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/dot_red.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5df2_7ecf.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5df2_7ecf.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8c41_7136.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8c41_7136.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_test.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_test.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6709.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6709.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fd0_52a8.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8fd0_52a8.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_62bd_8c61.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_62bd_8c61.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5047_8bbe.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5047_8bbe.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s6_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s6_1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_670b_53cb.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_670b_53cb.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/color_nav_selector.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/color/nav_selector.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s2_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s2_1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_77e5_9053.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_77e5_9053.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s3_1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s3_1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_597d.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_597d.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_4e3a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_4e3a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_76f8_4fe1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_76f8_4fe1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9a8c_8bc1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_9a8c_8bc1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d77_5e8a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8d77_5e8a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_97f3_4e50.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_97f3_4e50.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5343.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5343.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_51c6_5907.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_51c6_5907.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.iqra.chinese.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_pb_word.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/pb_word.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_input.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_input.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s3_2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s3_2.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ef7_503c_89c2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4ef7_503c_89c2.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bb6.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5bb6.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8d85_5e02.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8d85_5e02.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_673a_4f1a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_673a_4f1a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s2_2.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s2_2.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_9053_5fb7.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_9053_5fb7.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e40_8e9e.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8e40_8e9e.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5341.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5341.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_918d_9190_704c_9876.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_918d_9190_704c_9876.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f46_662f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4f46_662f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e09.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e09.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5a46_5a11.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5a46_5a11.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_94b1.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_94b1.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4f1a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4f1a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_90ae_5c40.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_90ae_5c40.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8c01.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8c01.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_8bc6.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_8bc6.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_practice.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_practice.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4ece.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4ece.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_533b_9662.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_533b_9662.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56e0_4e3a.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_56e0_4e3a.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6dcb_6f13.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_6dcb_6f13.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_501f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_501f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4eba.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4eba.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_53bb.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_53bb.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/drawable_bg_card.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e00.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e00.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_60f3_8c61.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_60f3_8c61.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_63d0_9ad8.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_63d0_9ad8.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8e0c_8e87.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8e0c_8e87.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0b_96ea.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0b_96ea.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5f1f_5f1f.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5f1f_5f1f.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_521b_65b0.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_521b_65b0.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_603b_7ed3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_603b_7ed3.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_item_level_card.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/item_level_card.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8fa9_8bba.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8fa9_8bba.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/layout_fragment_sentence.xml.flat",
+        "source": "com.iqra.chinese.app-main-7:/layout/fragment_sentence.xml"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7edd_4f26.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_7edd_4f26.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5496_5561.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_5496_5561.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_660e_5929.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_660e_5929.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4fee_7406.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_4fee_7406.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_627e.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_627e.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56de.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_56de.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_w_8ba4_77e5.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/w_8ba4_77e5.mp3"
+    },
+    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_7efc_5408.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_7efc_5408.mp3"
     },
@@ -1360,32 +1504,8 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_5417.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_662f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_662f.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_5728.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_5728.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7ba1_7406.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7ba1_7406.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e5f.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e5f.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e0c_671b.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5e0c_671b.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5bf9_4e0d_8d77.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5bf9_4e0d_8d77.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_81ea_884c_8f66.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_81ea_884c_8f66.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e66.mp3.flat",
@@ -1396,32 +1516,20 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_89e3_91ca.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e86_89e3.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e86_89e3.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_544a_8bc9.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_544a_8bc9.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_521b_9020.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_521b_9020.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_975e_5e38.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_975e_5e38.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_56fe_4e66_9986.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_56fe_4e66_9986.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_770b.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_770b.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6807_51c6.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_6807_51c6.mp3"
+    },
+    {
+        "merged": "com.iqra.chinese.app-debug-5:/raw_s_s3_3.mp3.flat",
+        "source": "com.iqra.chinese.app-main-7:/raw/s_s3_3.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_51fa_79df_8f66.mp3.flat",
@@ -1430,14 +1538,6 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_8863_670d.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_8863_670d.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_6ca1_5173_7cfb.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_6ca1_5173_7cfb.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5e94_8be5.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5e94_8be5.mp3"
     },
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_6700.mp3.flat",
@@ -1460,22 +1560,6 @@
         "source": "com.iqra.chinese.app-main-7:/raw/w_548c.mp3"
     },
     {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_592a_9633.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_592a_9633.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_903b_8f91.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_903b_8f91.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_5c11.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_5c11.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_7f31_7efb.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_7f31_7efb.mp3"
-    },
-    {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_732b.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_732b.mp3"
     },
@@ -1490,9 +1574,5 @@
     {
         "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e94.mp3.flat",
         "source": "com.iqra.chinese.app-main-7:/raw/w_4e94.mp3"
-    },
-    {
-        "merged": "com.iqra.chinese.app-debug-5:/raw_w_4e0a_5348.mp3.flat",
-        "source": "com.iqra.chinese.app-main-7:/raw/w_4e0a_5348.mp3"
     }
 ]

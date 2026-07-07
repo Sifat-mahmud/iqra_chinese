@@ -28,8 +28,9 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     private fun handleAlarm(ctx: Context) {
-        val iqra     = ctx.getSharedPreferences("iqra", Context.MODE_PRIVATE)
-        val goalMet  = iqra.getInt("daily", 0) >= 1800
+        val iqra      = ctx.getSharedPreferences("iqra", Context.MODE_PRIVATE)
+        val goalSecs  = iqra.getInt("goal_min", 30).coerceIn(5, 60) * 60
+        val goalMet   = iqra.getInt("daily", 0) >= goalSecs
 
         if (goalMet) {
             AlarmScheduler.schedule(ctx)
@@ -43,8 +44,12 @@ class AlarmReceiver : BroadcastReceiver() {
             // Phase 0 (0–12 h): standard heads-up notification with snooze
             showNotification(ctx)
         } else {
-            // Phase 1 (12–24 h): full clock-style alarm — launch AlarmActivity + sound service
-            launchAlarmActivity(ctx)
+            // Phase 1 (12–24 h): full clock-style alarm.
+            // IMPORTANT: only the foreground service starts here — the service
+            // itself launches AlarmActivity from onCreate(), because Android 10+
+            // (and especially MIUI) blocks startActivity() calls made directly
+            // from a BroadcastReceiver. A running foreground service is trusted
+            // to start an activity, a plain receiver is not.
             AlarmSoundService.start(ctx)
         }
 
@@ -89,39 +94,6 @@ class AlarmReceiver : BroadcastReceiver() {
 
         (ctx.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
             .notify(NID, nb.build())
-    }
-
-    private fun launchAlarmActivity(ctx: Context) {
-        // Full-screen Intent — shown over lock screen like a clock alarm
-        val alarmIntent = Intent(ctx, AlarmActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                    Intent.FLAG_ACTIVITY_SINGLE_TOP or
-                    Intent.FLAG_ACTIVITY_NO_USER_ACTION
-        }
-
-        val fullScreenPi = PendingIntent.getActivity(
-            ctx, 1,
-            alarmIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val nb = NotificationCompat.Builder(ctx, CH_ALARM)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("⏰ STUDY NOW — 快学习！")
-            .setContentText("12h without practice. Tap to open alarm.")
-            .setPriority(NotificationCompat.PRIORITY_MAX)
-            .setCategory(NotificationCompat.CATEGORY_ALARM)
-            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-            .setOngoing(true)
-            .setAutoCancel(false)
-            .setFullScreenIntent(fullScreenPi, true)
-            .setContentIntent(fullScreenPi)
-
-        (ctx.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
-            .notify(NID, nb.build())
-
-        // Also directly start the activity (more reliable on MIUI)
-        try { ctx.startActivity(alarmIntent) } catch (_: Exception) {}
     }
 
     private fun createChannels(ctx: Context) {

@@ -36,6 +36,31 @@ class SettingsFragment : BaseFragment() {
         b.switchPinyin.setOnCheckedChangeListener  { _, v -> vm.setShowPinyin(v) }
         b.switchMeaning.setOnCheckedChangeListener { _, v -> vm.setShowMeaning(v) }
 
+        // Daily study goal slider (5–60 min, default 30)
+        val currentGoal = vm.repo.prefs.dailyGoalMinutes
+        b.seekGoal.progress = currentGoal
+        b.tvGoalLabel.text  = "Daily study goal: $currentGoal min"
+        b.seekGoal.setOnSeekBarChangeListener(object : android.widget.SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(sb: android.widget.SeekBar?, progress: Int, fromUser: Boolean) {
+                // Enforce 5-min floor — SeekBar min= requires API 26, guard anyway
+                val clamped = progress.coerceIn(5, 60)
+                if (clamped != progress) sb?.progress = clamped
+                b.tvGoalLabel.text = "Daily study goal: $clamped min"
+            }
+            override fun onStartTrackingTouch(sb: android.widget.SeekBar?) {}
+            override fun onStopTrackingTouch(sb: android.widget.SeekBar?) {
+                val newGoal = sb?.progress?.coerceIn(5, 60) ?: 30
+                vm.repo.prefs.dailyGoalMinutes = newGoal
+                // Refresh dependent UI immediately
+                vm.daily.value?.let { secs ->
+                    b.tvDaily.text     = "${secs/60}m ${(secs%60).toString().padStart(2,'0')}s / ${newGoal}m"
+                    b.pbDaily.progress = minOf(100, secs * 100 / (newGoal * 60))
+                }
+                refreshAlarmPhase(AlarmPrefs(requireContext()))
+                Toast.makeText(context, "Goal set to $newGoal min", Toast.LENGTH_SHORT).show()
+            }
+        })
+
         // Firebase account card
         refreshAccountCard()
         b.btnSignInOut.setOnClickListener {
@@ -72,8 +97,9 @@ class SettingsFragment : BaseFragment() {
         vm.xp.observe(viewLifecycleOwner)     { b.tvXP.text = "⚡ $it XP  ·  Level ${it/500+1}" }
         vm.streak.observe(viewLifecycleOwner) { b.tvStreak.text = "🔥 $it day streak" }
         vm.daily.observe(viewLifecycleOwner)  {
-            b.tvDaily.text    = "${it/60}m ${(it%60).toString().padStart(2,'0')}s / 30m"
-            b.pbDaily.progress = minOf(100, it * 100 / 1800)
+            val goalMin = vm.repo.prefs.dailyGoalMinutes
+            b.tvDaily.text    = "${it/60}m ${(it%60).toString().padStart(2,'0')}s / ${goalMin}m"
+            b.pbDaily.progress = minOf(100, it * 100 / (goalMin * 60))
         }
         b.tvBest.text     = "🏆 Best test: ${vm.bestTest}%"
         b.tvAppInfo.text  = "Iqra Chinese  ·  ${HskData.words.values.sumOf{it.size}} words  ·  6 HSK levels  ·  Offline"
@@ -237,12 +263,13 @@ Install Chinese TTS:
         val phase = alarmPhase(alarmPrefs)
         val iqraPrefs = vm.repo.prefs
         val dailySecs = iqraPrefs.dailySecs
-        val goalMet   = dailySecs >= 1800
+        val goalMin   = iqraPrefs.dailyGoalMinutes
+        val goalMet   = dailySecs >= iqraPrefs.dailyGoalSecs
         val elapsedH  = ((System.currentTimeMillis() - alarmPrefs.todayStartMs) / 3_600_000).toInt()
         val startStr  = "%02d:%02d".format(alarmPrefs.dayStartHour, alarmPrefs.dayStartMinute)
 
         b.tvAlarmPhase.text = when {
-            goalMet -> "✅ 30-min goal met — alarm silenced for today"
+            goalMet -> "✅ $goalMin-min goal met — alarm silenced for today"
             phase == 0 -> "🔔 Phase 1 of 2: Notification mode (hour $elapsedH of 12)\nDay started at $startStr"
             else       -> "🚨 Phase 2 of 2: ALARM mode — goal not met after 12h\nDay started at $startStr"
         }

@@ -45,6 +45,29 @@ class AlarmSoundService : Service() {
         startForeground(9002, buildNotification())
         playAlarm()
         startVibration()
+        launchAlarmGui()
+    }
+
+    /**
+     * Launches the full-screen AlarmActivity GUI so the user sees a clear
+     * "study now" screen instead of just hearing sound in the background.
+     *
+     * Called from a running foreground service context (this), which Android
+     * trusts to start activities — unlike a plain BroadcastReceiver, which
+     * Android 10+ (and MIUI especially) silently blocks from doing so.
+     */
+    private fun launchAlarmGui() {
+        try {
+            val intent = Intent(this, AlarmActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_SINGLE_TOP or
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP
+            }
+            startActivity(intent)
+        } catch (e: Exception) {
+            // Some OEMs may still block this — full-screen notification below
+            // is the fallback (user taps it to open AlarmActivity manually).
+        }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -108,11 +131,11 @@ class AlarmSoundService : Service() {
     }
 
     private fun buildNotification(): Notification {
+        val intent = Intent(this, AlarmActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
         val openPi = PendingIntent.getActivity(
-            this, 0,
-            Intent(this, AlarmActivity::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
-            },
+            this, 0, intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
         return NotificationCompat.Builder(this, CH_SVC)
@@ -121,8 +144,15 @@ class AlarmSoundService : Service() {
             .setContentText("Tap to stop the alarm")
             .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setPriority(NotificationCompat.PRIORITY_MAX)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setOngoing(true)
             .setContentIntent(openPi)
+            // Official Android mechanism for alarm-clock-style apps: shows the
+            // activity full-screen even over the lock screen. This is the
+            // documented, OEM-respected way to surface a GUI from a background
+            // trigger — used as a robust companion to the direct startActivity()
+            // call above (which some OEMs may still suppress).
+            .setFullScreenIntent(openPi, true)
             .build()
     }
 
@@ -130,10 +160,19 @@ class AlarmSoundService : Service() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (nm.getNotificationChannel(CH_SVC) != null) return
+        val attrs = AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_ALARM)
+            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+            .build()
+        // IMPORTANCE_HIGH is required for setFullScreenIntent() to actually
+        // trigger — IMPORTANCE_LOW (the old setting) silently suppresses it.
         val ch = NotificationChannel(CH_SVC, "Alarm Sound Service",
-            NotificationManager.IMPORTANCE_LOW).apply {
-            description = "Keeps alarm sound playing"
-            setSound(null, null)
+            NotificationManager.IMPORTANCE_HIGH).apply {
+            description = "Full-screen study alarm with sound"
+            enableVibration(true)
+            vibrationPattern = longArrayOf(0, 800, 400, 800, 400)
+            setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM), attrs)
+            lockscreenVisibility = Notification.VISIBILITY_PUBLIC
         }
         nm.createNotificationChannel(ch)
     }

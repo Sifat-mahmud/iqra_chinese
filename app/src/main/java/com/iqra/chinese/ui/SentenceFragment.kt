@@ -14,9 +14,12 @@ import com.iqra.chinese.R
 import com.iqra.chinese.data.HskData
 import com.iqra.chinese.data.Sentence
 import com.iqra.chinese.databinding.FragmentSentenceBinding
+import com.iqra.chinese.tts.SentenceAudioCache
 import com.iqra.chinese.tts.TtsManager
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SentenceFragment : BaseFragment() {
     private var _b: FragmentSentenceBinding? = null
@@ -47,18 +50,28 @@ class SentenceFragment : BaseFragment() {
     private fun speakCurrent() {
         if (sents.isEmpty()) return
         val s = sents[idx % sents.size]
-        when (TtsManager.status) {
-            TtsManager.Status.READY -> TtsManager.speak(s.char)
-            TtsManager.Status.LANGUAGE_MISSING -> showTtsDialog()
-            TtsManager.Status.INITIALIZING -> Toast.makeText(context,"TTS loading…",Toast.LENGTH_SHORT).show()
-            else -> Toast.makeText(context,"TTS unavailable",Toast.LENGTH_SHORT).show()
-        }
+        speakSentence(s, slow = false)
     }
 
     private fun speakCurrentSlow() {
         if (sents.isEmpty()) return
         val s = sents[idx % sents.size]
-        if (TtsManager.isReady()) TtsManager.speakSlow(s.char) else speakCurrent()
+        speakSentence(s, slow = true)
+    }
+
+    private fun speakSentence(s: Sentence, slow: Boolean) {
+        val ctx = context ?: return
+        when (TtsManager.status) {
+            TtsManager.Status.LANGUAGE_MISSING -> showTtsDialog()
+            TtsManager.Status.INITIALIZING ->
+                Toast.makeText(context, "TTS loading…", Toast.LENGTH_SHORT).show()
+            else -> {
+                // Use cached audio if available, otherwise synthesize + cache
+                viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
+                    SentenceAudioCache.speak(ctx, s.id, s.char, slow)
+                }
+            }
+        }
     }
 
     private fun showTtsDialog() {
@@ -89,6 +102,22 @@ class SentenceFragment : BaseFragment() {
             b.cardSent.visibility = View.GONE; b.tvEmpty.visibility = View.VISIBLE
         } else {
             b.cardSent.visibility = View.VISIBLE; b.tvEmpty.visibility = View.GONE; show()
+            // Pre-cache all sentences for this level in background
+            preCacheLevel()
+        }
+    }
+
+    /**
+     * Pre-generates and caches audio for all sentences in the current level.
+     * Runs in background so it doesn't block UI. Only processes un-cached sentences.
+     */
+    private fun preCacheLevel() {
+        val ctx = context ?: return
+        val pairs = sents.map { it.id to it.char }
+        viewLifecycleOwner.lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                SentenceAudioCache.preCacheLevel(ctx, pairs)
+            }
         }
     }
 
@@ -100,8 +129,8 @@ class SentenceFragment : BaseFragment() {
         b.tvMeaning.text = if (vm.showMeaning) s.meaning else ""
         b.tvCounter.text = "${idx % sents.size + 1} / ${sents.size}"
         b.etAnswer.setText(""); b.etAnswer.setBackgroundResource(R.drawable.bg_input)
-        b.btnSpeak.alpha     = if (TtsManager.isReady()) 1f else 0.5f
-        b.btnSpeakSlow.alpha = if (TtsManager.isReady()) 1f else 0.5f
+        b.btnSpeak.alpha     = 1f  // always enabled — cache falls back to TTS
+        b.btnSpeakSlow.alpha = 1f
     }
 
     private fun check() {
@@ -113,12 +142,17 @@ class SentenceFragment : BaseFragment() {
         val ok    = words.isEmpty() || m.toFloat() / words.size >= 0.6f
         busy = true
         b.etAnswer.setBackgroundResource(if (ok) R.drawable.bg_input_ok else R.drawable.bg_input_err)
-        if (ok && TtsManager.isReady()) TtsManager.speak(s.char)
+        if (ok) speakSentence(s, slow = false)
         vm.record(s.id, "sentence", level, ok)
         viewLifecycleOwner.lifecycleScope.launch {
             delay(800); if (_b != null) { idx++; show() }; busy = false
         }
     }
 
-    override fun onDestroyView() { super.onDestroyView(); _b = null }
+    override fun onDestroyView() {
+        SentenceAudioCache.stop()
+        super.onDestroyView()
+        _b = null
+    }
 }
+

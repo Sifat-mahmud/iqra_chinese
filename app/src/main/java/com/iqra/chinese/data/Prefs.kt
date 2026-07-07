@@ -18,6 +18,39 @@ class Prefs(ctx: Context) {
     var bestTest: Int get() = p.getInt("best", 0); set(v) = p.edit { putInt("best", v) }
     var snoozeUsed: Boolean get() = p.getBoolean("snooze", false); set(v) = p.edit { putBoolean("snooze", v) }
 
+    /**
+     * Daily study goal in minutes. User-configurable 5–60, default 30.
+     * Stored in minutes (not seconds) for simpler UI binding with NumberPicker/SeekBar.
+     */
+    var dailyGoalMinutes: Int
+        get()  = p.getInt("goal_min", 30).coerceIn(5, 60)
+        set(v) = p.edit { putInt("goal_min", v.coerceIn(5, 60)) }
+
+    /** Goal expressed in seconds — used everywhere internally for comparison against dailySecs */
+    val dailyGoalSecs: Int get() = dailyGoalMinutes * 60
+
+    /**
+     * Per-day study time log: { "yyyy-MM-dd" : totalSecondsThatDay }
+     * Updated once per day when the date rolls over (see Repository.touchStreak),
+     * plus continuously for "today" via a live merge in getTimeHistory().
+     */
+    var timeHistoryJson: String
+        get()  = p.getString("time_hist", "{}") ?: "{}"
+        set(v) = p.edit { putString("time_hist", v) }
+
+    fun getTimeHistory(): MutableMap<String, Int> {
+        val type = object : TypeToken<MutableMap<String, Int>>(){}.type
+        return runCatching { g.fromJson<MutableMap<String, Int>>(timeHistoryJson, type) }
+            .getOrNull() ?: mutableMapOf()
+    }
+
+    /** Records [seconds] of study time for [date] (yyyy-MM-dd), replacing any prior value for that day. */
+    fun saveTimeForDate(date: String, seconds: Int) {
+        val hist = getTimeHistory()
+        hist[date] = seconds
+        timeHistoryJson = g.toJson(hist)
+    }
+
     // Firebase backup — tracks last date we pushed stats to Realtime DB
     var lastBackupDate: String get() = p.getString("last_backup", "") ?: ""; set(v) = p.edit { putString("last_backup", v) }
 

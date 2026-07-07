@@ -66,7 +66,22 @@
                 <ProgressBar android:id="@+id/pbDaily"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent" android:layout_height="5dp"
-                    android:progressDrawable="@drawable/pb_daily" android:max="100"/>
+                    android:progressDrawable="@drawable/pb_daily" android:max="100"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Daily study goal slider -->
+                <TextView android:id="@+id/tvGoalLabel"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Daily study goal: 30 min"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="4dp"/>
+                <SeekBar android:id="@+id/seekGoal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:min="5" android:max="60" android:progress="30"
+                    android:progressTint="@color/gold" android:thumbTint="@color/gold"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="5 min                                                              60 min"
+                    android:textSize="9sp" android:textColor="@color/text_muted"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

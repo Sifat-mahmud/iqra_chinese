@@ -4,72 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bannerOverlay"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#99000000"
+    android:background="#B3000000"
     android:visibility="gone"
-    android:clickable="true"
-    android:focusable="true"
+    android:clickable="true" android:focusable="true"
     android:elevation="50dp">
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_gravity="center" android:layout_margin="28dp"
-        app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="18dp"
-        app:cardElevation="8dp">
+        android:layout_gravity="center" android:layout_margin="24dp">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Banner image (optional, hidden if no imageUrl) -->
-            <ImageView android:id="@+id/ivBannerImage"
-                android:layout_width="match_parent" android:layout_height="160dp"
-                android:scaleType="centerCrop"
-                android:visibility="gone"
-                android:background="@color/bg3"/>
+            app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="18dp"
+            app:cardElevation="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="vertical" android:padding="20dp">
+                android:orientation="vertical">
 
-                <!-- Close button row -->
+                <!-- Image (shown when imageUrl is set, hidden otherwise) -->
+                <ImageView android:id="@+id/ivBannerImage"
+                    android:layout_width="match_parent" android:layout_height="180dp"
+                    android:scaleType="centerCrop" android:visibility="gone"
+                    android:background="@color/bg3"/>
+
+                <!-- Inline video player (shown when videoUrl is set) -->
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/bannerPlayerView"
+                    android:layout_width="match_parent" android:layout_height="200dp"
+                    android:visibility="gone"
+                    app:show_buffering="when_playing"
+                    app:use_controller="true"
+                    app:resize_mode="fill"/>
+
                 <LinearLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:gravity="end"
-                    android:layout_marginBottom="4dp">
-                    <ImageButton android:id="@+id/btnBannerClose"
-                        android:layout_width="32dp" android:layout_height="32dp"
-                        android:src="@drawable/ic_close"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Close"
-                        app:tint="@color/text_muted"/>
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <!-- Close button -->
+                    <LinearLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="end"
+                        android:layout_marginBottom="2dp">
+                        <ImageButton android:id="@+id/btnBannerClose"
+                            android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_close"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Close"
+                            app:tint="@color/text_muted"/>
+                    </LinearLayout>
+
+                    <!-- Title -->
+                    <TextView android:id="@+id/tvBannerTitle"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:textStyle="bold"
+                        android:textColor="@color/gold" android:layout_marginBottom="8dp"
+                        tools:text="🎉 New content!"/>
+
+                    <!-- Message -->
+                    <TextView android:id="@+id/tvBannerMessage"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textSize="14sp" android:textColor="@color/text_secondary"
+                        android:lineSpacingMultiplier="1.4" android:layout_marginBottom="14dp"
+                        tools:text="Check out our latest update!"/>
+
+                    <!-- YouTube open button (Option A) -->
+                    <Button android:id="@+id/btnBannerYoutube"
+                        android:layout_width="match_parent" android:layout_height="48dp"
+                        android:text="▶  Watch on YouTube"
+                        android:textSize="13sp" android:textColor="@color/white"
+                        android:backgroundTint="#FFCC0000"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"/>
+
+                    <!-- Action button (optional deep link / URL) -->
+                    <Button android:id="@+id/btnBannerAction"
+                        android:layout_width="match_parent" android:layout_height="48dp"
+                        android:text="Learn more"
+                        android:textSize="13sp" android:textColor="@color/black"
+                        android:backgroundTint="@color/gold"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"/>
+
+                    <!-- Feedback section (shown when feedback=true) -->
+                    <LinearLayout android:id="@+id/layoutFeedback"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:visibility="gone">
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="@color/bg3" android:layout_marginBottom="12dp"/>
+
+                        <TextView android:id="@+id/tvFeedbackQuestion"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textSize="13sp" android:textColor="@color/text_secondary"
+                            android:textStyle="italic" android:layout_marginBottom="8dp"
+                            tools:text="What do you think of the app?"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            app:boxBackgroundColor="@color/bg3"
+                            app:boxStrokeColor="@color/gold"
+                            app:hintTextColor="@color/text_muted"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFeedback"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:hint="Your answer..."
+                                android:minLines="2" android:maxLines="4"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:textColor="@color/text_primary"
+                                android:textColorHint="@color/text_muted"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button android:id="@+id/btnSubmitFeedback"
+                            android:layout_width="match_parent" android:layout_height="44dp"
+                            android:text="Submit Feedback"
+                            android:textSize="13sp" android:textColor="@color/black"
+                            android:backgroundTint="@color/jade"/>
+
+                        <TextView android:id="@+id/tvFeedbackThanks"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✅ Thank you for your feedback!"
+                            android:textSize="13sp" android:textColor="@color/jade"
+                            android:gravity="center" android:layout_marginTop="8dp"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
                 </LinearLayout>
-
-                <!-- Title -->
-                <TextView android:id="@+id/tvBannerTitle"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:textSize="18sp" android:textStyle="bold"
-                    android:textColor="@color/gold"
-                    android:layout_marginBottom="8dp"
-                    tools:text="🎉 New content available!"/>
-
-                <!-- Message -->
-                <TextView android:id="@+id/tvBannerMessage"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:textSize="14sp" android:textColor="@color/text_secondary"
-                    android:lineSpacingMultiplier="1.4"
-                    android:layout_marginBottom="16dp"
-                    tools:text="We've added new vocabulary words. Check them out!"/>
-
-                <!-- Action button (optional) -->
-                <Button android:id="@+id/btnBannerAction"
-                    android:layout_width="match_parent" android:layout_height="48dp"
-                    android:text="Learn more"
-                    android:textSize="14sp" android:textColor="@color/black"
-                    android:backgroundTint="@color/gold"
-                    android:visibility="gone"/>
-
             </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
 </FrameLayout>

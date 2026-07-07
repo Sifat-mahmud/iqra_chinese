@@ -57,6 +57,10 @@ class Repository(
         val fmt = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val today = fmt.format(Date())
         if (prefs.lastDate != today) {
+            // Save yesterday's final tally into the time-history log before resetting
+            if (prefs.lastDate.isNotEmpty()) {
+                prefs.saveTimeForDate(prefs.lastDate, prefs.dailySecs)
+            }
             val yesterday = fmt.format(Date(System.currentTimeMillis() - 86_400_000L))
             prefs.streak = if (prefs.lastDate == yesterday) prefs.streak + 1 else 1
             prefs.lastDate = today
@@ -64,7 +68,16 @@ class Repository(
         }
     }
 
-    fun tickDaily() { prefs.dailySecs += 1; touchStreak() }
+    fun tickDaily() {
+        prefs.dailySecs += 1
+        touchStreak()
+        // Keep today's entry continuously up to date in the history log too,
+        // so the Stats time-chart reflects live progress. Throttled to every
+        // 10s to avoid re-serializing the JSON map on every single tick.
+        if (prefs.dailySecs % 10 == 0) {
+            prefs.saveTimeForDate(prefs.lastDate, prefs.dailySecs)
+        }
+    }
 
     /**
      * Call this from a coroutine scope after tickDaily — triggers the once-a-day
@@ -96,7 +109,7 @@ class Repository(
         chk("xp2000",  prefs.xp >= 2000)
         chk("unlock2", prefs.unlocked.contains(2))
         chk("unlock3", prefs.unlocked.contains(3))
-        chk("daily",   prefs.dailySecs >= 1800)
+        chk("daily",   prefs.dailySecs >= prefs.dailyGoalSecs)
         return newList
     }
 

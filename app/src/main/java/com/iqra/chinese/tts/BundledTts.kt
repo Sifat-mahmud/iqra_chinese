@@ -328,7 +328,29 @@ object BundledTts {
         "斐然" to R.raw.w_6590_7136,
         "蹀躞" to R.raw.w_8e40_8e9e,
         "踯躅" to R.raw.w_8e2f_8e85,
-        "踌躇" to R.raw.w_8e0c_8e87
+        "踌躇" to R.raw.w_8e0c_8e87,
+
+        // ── Sentences (HSK 1–6) — bundled for MIUI devices without TTS ──────
+        "我喜欢喝茶。" to R.raw.s_s1_1,
+        "你好吗？" to R.raw.s_s1_2,
+        "他是我的朋友。" to R.raw.s_s1_3,
+        "今天天气很好。" to R.raw.s_s1_4,
+        "我们去吃饭吧。" to R.raw.s_s1_5,
+        "这本书很好看。" to R.raw.s_s1_6,
+        "她叫什么名字？" to R.raw.s_s1_7,
+        "今天是星期几？" to R.raw.s_s1_8,
+        "我每天早上跑步。" to R.raw.s_s2_1,
+        "这个超市的东西很便宜。" to R.raw.s_s2_2,
+        "今天天气不好，下雨了。" to R.raw.s_s2_3,
+        "我坐地铁去上班。" to R.raw.s_s2_4,
+        "你的手机号码是多少？" to R.raw.s_s2_5,
+        "我认为这个问题很难解决。" to R.raw.s_s3_1,
+        "这次机会对我来说非常重要。" to R.raw.s_s3_2,
+        "你应该多锻炼，注意身体健康。" to R.raw.s_s3_3,
+        "这项政策对社会发展有很大影响。" to R.raw.s_s4_1,
+        "只有通过不断学习，才能提高自己的能力。" to R.raw.s_s4_2,
+        "他的逻辑思维非常清晰，能快速解决复杂问题。" to R.raw.s_s5_1,
+        "夕阳的余晖蔓延在蜿蜒的山路上，令人惆怅。" to R.raw.s_s6_1
     )
 
     fun init(context: Context) {

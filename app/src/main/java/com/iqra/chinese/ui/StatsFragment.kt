@@ -30,8 +30,9 @@ class StatsFragment : BaseFragment() {
         vm.streak.observe(viewLifecycleOwner) { b.tvStreak.text = "🔥 $it days" }
         vm.daily.observe(viewLifecycleOwner)  {
             val m = it / 60; val s = it % 60
-            b.tvDaily.text = "${m}m ${s.toString().padStart(2,'0')}s / 30m"
-            b.pbDaily.progress = minOf(100, it * 100 / 1800)
+            val goalMin = vm.repo.prefs.dailyGoalMinutes
+            b.tvDaily.text = "${m}m ${s.toString().padStart(2,'0')}s / ${goalMin}m"
+            b.pbDaily.progress = minOf(100, it * 100 / (goalMin * 60))
         }
         b.tvBest.text = "🏆 Best test: ${vm.bestTest}%"
 
@@ -60,6 +61,24 @@ class StatsFragment : BaseFragment() {
                     atts.sumOf { r -> r.history.count { h -> h.ts in s until s + 86_400_000L && h.passed } }.toFloat()
                 }
                 b.barChart.setData(vals, days)
+
+                // Time-studied chart (last 7 days, in minutes)
+                val timeHist = vm.repo.prefs.getTimeHistory()
+                val fmt = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault())
+                val timeVals = (0..6).map { i ->
+                    val d = fmt.format(java.util.Date(now - (6 - i) * 86_400_000L))
+                    (timeHist[d] ?: 0) / 60f   // seconds → minutes
+                }
+                b.timeChart.setData(timeVals, days)
+
+                val totalSecs = timeHist.values.sum() + vm.repo.prefs.dailySecs.let {
+                    // dailySecs for today is already merged into timeHist via saveTimeForDate,
+                    // but guard in case today's entry hasn't been throttle-saved yet this session
+                    if (timeHist[vm.repo.prefs.lastDate] == null) it else 0
+                }
+                val totalH = totalSecs / 3600
+                val totalM = (totalSecs % 3600) / 60
+                b.tvTotalTimeStudied.text = "Total: ${totalH}h ${totalM}m"
 
                 // Level progress rows
                 b.llLevelProgress.removeAllViews()

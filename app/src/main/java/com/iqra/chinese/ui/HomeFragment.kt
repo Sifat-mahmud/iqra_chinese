@@ -37,8 +37,9 @@ class HomeFragment : BaseFragment() {
         vm.streak.observe(viewLifecycleOwner) { _b?.tvStreak?.text = "🔥 $it" }
         vm.daily.observe(viewLifecycleOwner)  {
             val m = it / 60; val sec = it % 60
-            _b?.tvDaily?.text     = "${m}m ${sec.toString().padStart(2,'0')}s / 30m"
-            _b?.pbDaily?.progress = minOf(100, it * 100 / 1800)
+            val goalMin = vm.repo.prefs.dailyGoalMinutes
+            _b?.tvDaily?.text     = "${m}m ${sec.toString().padStart(2,'0')}s / ${goalMin}m"
+            _b?.pbDaily?.progress = minOf(100, it * 100 / (goalMin * 60))
         }
 
         // Safe flow collection — cancels when lifecycle drops below STARTED
