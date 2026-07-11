@@ -4,6 +4,22 @@
     android:orientation="vertical" android:gravity="center"
     android:background="@color/bg" android:padding="32dp">
 
+    <!-- App branding — makes it unmistakable which app triggered this alarm -->
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginEnd="8dp"/>
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="IQRA CHINESE" android:textSize="13sp"
+            android:textColor="@color/text_muted" android:letterSpacing="0.15"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
     <!-- Clock-style time display -->
     <TextClock
         android:layout_width="wrap_content" android:layout_height="wrap_content"

@@ -76,12 +76,17 @@ class AlarmReceiver : BroadcastReceiver() {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
+        val appIcon = android.graphics.BitmapFactory.decodeResource(
+            ctx.resources, R.mipmap.ic_launcher
+        )
         val nb = NotificationCompat.Builder(ctx, CH_NOTIF)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("📚 Study reminder — 加油！")
-            .setContentText("You haven't hit your 30-min goal yet today.")
+            .setLargeIcon(appIcon)
+            .setContentTitle("📚 Iqra Chinese — Study Reminder")
+            .setContentText("加油！ You haven't hit today's study goal yet.")
+            .setSubText("Iqra Chinese")
             .setStyle(NotificationCompat.BigTextStyle()
-                .bigText("Keep your streak alive! Tap to open Iqra Chinese. 🀄"))
+                .bigText("This reminder is from Iqra Chinese. Keep your streak alive — tap to open the app. 🀄"))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .setAutoCancel(false)

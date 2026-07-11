@@ -138,10 +138,19 @@ class AlarmSoundService : Service() {
             this, 0, intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
+        val appIcon = android.graphics.BitmapFactory.decodeResource(
+            resources, R.mipmap.ic_launcher
+        )
         return NotificationCompat.Builder(this, CH_SVC)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("⏰ Study Alarm — 快学习！")
-            .setContentText("Tap to stop the alarm")
+            .setLargeIcon(appIcon)   // shows the Iqra Chinese app icon prominently — makes the
+                                     // sound's source unmistakable even before any screen opens
+            .setContentTitle("⏰ Iqra Chinese — Study Alarm")
+            .setContentText("快学习！ Tap to open and stop the alarm")
+            .setSubText("Iqra Chinese")
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText("This alarm is from Iqra Chinese. You haven't completed today's " +
+                        "study goal. Tap to open the app and stop the sound."))
             .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
