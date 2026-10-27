@@ -29,12 +29,13 @@ The app has five tabs along the bottom: **Home · Groups · Test · Stats · Set
 ## Table of contents
 
 1. [Features at a glance](#features-at-a-glance)
-2. [Home: your learning dashboard](#1-home--your-learning-dashboard)
-3. [Test: quiz yourself](#2-test--quiz-yourself)
-4. [Stats: see your progress](#3-stats--see-your-progress)
-5. [Settings: tune the app](#4-settings--tune-the-app)
-6. [Daily study loop](#daily-study-loop)
-7. [Tips and troubleshooting](#tips-and-troubleshooting)
+2. [Home: your learning dashboard](#1-home-your-learning-dashboard)
+3. [Sentences: practise full phrases](#2-sentences-practise-full-phrases)
+4. [Test: quiz yourself](#3-test-quiz-yourself)
+5. [Stats: see your progress](#4-stats-see-your-progress)
+6. [Settings: tune the app](#5-settings-tune-the-app)
+7. [Daily study loop](#daily-study-loop)
+8. [Tips and troubleshooting](#tips-and-troubleshooting)
 
 ---
 
@@ -43,7 +44,7 @@ The app has five tabs along the bottom: **Home · Groups · Test · Stats · Set
 | Feature | What it does |
 |---|---|
 | **HSK 1–6 levels** | Words grouped by HSK level. Each level unlocks after you complete the previous one. |
-| **Words and sentences** | Practise single words, or switch to example sentences for each level. |
+| **Words and sentences** | Practise single words, or type the pinyin and meaning of example sentences, with audio and a per-word breakdown. |
 | **Two test modes** | Character → Meaning and Meaning → Character, 20 questions per test. |
 | **XP, levels and streaks** | Earn XP for correct answers and keep a daily streak going. |
 | **Daily study goal** | Set a goal from 5 to 60 minutes and watch the timer fill. |
@@ -72,12 +73,39 @@ The app has five tabs along the bottom: **Home · Groups · Test · Stats · Set
 
 - Each level card shows how many words you have mastered (for example `50 / 300`) and a percentage.
 - Tap a level to start practising its words.
-- Tap **📖 SENTENCES** on a level to practise with sentences instead of single words.
+- Tap **📖 SENTENCES** on a level to practise with sentences instead of single words (see [Sentences](#2-sentences-practise-full-phrases)).
 - Levels that are not yet available are greyed out with a 🔒 and a hint such as *"Complete HSK 3 first"*. Reach 100% on the previous level to unlock the next.
 
 ---
 
-## 2. Test: quiz yourself
+## 2. Sentences: practise full phrases
+
+<p align="center">
+  <img src="screenshots/06-sentences.jpg" alt="Sentences practice screen" width="280">
+</p>
+
+Open it by tapping **📖 SENTENCES** on any level card on Home. Use the HSK 1 / HSK 2 / HSK 3 tabs to switch level.
+
+**The sentence card**
+
+- A counter such as `20 / 38` shows where you are in the level.
+- The sentence is shown in Chinese characters (`早上好！`), with its pinyin (*zǎo shàng hǎo!*) and English translation (*Good morning!*) underneath. The pinyin and meaning lines follow your **Show Pinyin** and **Show Meaning** toggles in Settings.
+
+**How to answer**
+
+1. Tap the 🔊 buttons to hear the sentence (the second button plays it differently, for example slower).
+2. Type the **pinyin** in the first box, for example `nihaoma`. Tone marks are not needed.
+3. Type the **English meaning** in the second box.
+4. Tap **CHECK ✓**. You need a **60% word match** to advance.
+5. Not sure? Tap **SKIP →** to move on.
+
+**Words in this sentence**
+
+Below the answer boxes, each word in the sentence is listed with its character, pinyin, English meaning and an **HSK badge** showing which level it belongs to. In the example, 早上 (*zǎoshang*, morning) is HSK 2 and 好 (*hǎo*, good) is HSK 1. This helps you spot words you still need to study.
+
+---
+
+## 3. Test: quiz yourself
 
 <p align="center">
   <img src="screenshots/03-test.jpg" alt="Test screen" width="280">
@@ -94,7 +122,7 @@ Your best test score is stored and shown on the Stats and Settings screens.
 
 ---
 
-## 3. Stats: see your progress
+## 4. Stats: see your progress
 
 <p align="center">
   <img src="screenshots/02-stats.jpg" alt="Statistics screen" width="280">
@@ -114,7 +142,7 @@ Your best test score is stored and shown on the Stats and Settings screens.
 
 ---
 
-## 4. Settings: tune the app
+## 5. Settings: tune the app
 
 <p align="center">
   <img src="animations/settings-scroll.gif" alt="Animated scroll through the Settings screen" width="280">
@@ -221,6 +249,7 @@ A good routine:
     ├── 01-home.jpg
     ├── 02-stats.jpg
     ├── 03-test.jpg
+    ├── 06-sentences.jpg
     ├── 04-settings-top.jpg
     └── 05-settings-bottom.jpg
 ```

@@ -26,10 +26,11 @@ def frame_with_caption(img, title, sub):
 # ---------- 1. App tour (cross-fade slideshow) ----------
 steps = [
     ("screenshots/01-home.jpg", "1 · Home", "Track mastery per HSK level"),
-    ("screenshots/03-test.jpg", "2 · Test", "Pick level, words/sentences, mode"),
-    ("screenshots/02-stats.jpg", "3 · Stats", "Accuracy, streak, 7-day charts"),
-    ("screenshots/04-settings-top.jpg", "4 · Settings", "Backup, daily goal, display, alarm"),
-    ("screenshots/05-settings-bottom.jpg", "5 · More settings", "TTS, day start, reset options"),
+    ("screenshots/06-sentences.jpg", "2 · Sentences", "Type pinyin + meaning, 60% to advance"),
+    ("screenshots/03-test.jpg", "3 · Test", "Pick level, words/sentences, mode"),
+    ("screenshots/02-stats.jpg", "4 · Stats", "Accuracy, streak, 7-day charts"),
+    ("screenshots/04-settings-top.jpg", "5 · Settings", "Backup, daily goal, display, alarm"),
+    ("screenshots/05-settings-bottom.jpg", "6 · More settings", "TTS, day start, reset options"),
 ]
 imgs = [frame_with_caption(Image.open(p).convert("RGB"), t, s) for p, t, s in steps]
 frames, durs = [], []
