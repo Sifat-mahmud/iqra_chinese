@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="Iqra Chinese – HSK 1-6 offline vocabulary trainer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a14"/><stop offset="1" stop-color="#1a1a33"/>
+    </linearGradient>
+    <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5a623"/><stop offset="1" stop-color="#fcd34d"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#f5c842"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="260" rx="22" fill="url(#bg)"/>
+
+  <!-- logo tile -->
+  <rect x="40" y="40" width="110" height="110" rx="26" fill="url(#logo)">
+    <animate attributeName="opacity" values="1;.85;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="95" y="120" font-size="72" text-anchor="middle" fill="#1a1a2e" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-weight="700">学</text>
+
+  <text x="175" y="88" font-size="46" font-weight="700" fill="#ffffff" font-family="Segoe UI,Helvetica,Arial,sans-serif">Iqra Chinese</text>
+  <text x="177" y="122" font-size="18" letter-spacing="4" fill="#8b8ba7" font-family="Segoe UI,Helvetica,Arial,sans-serif">HSK 1–6  ·  OFFLINE  ·  VOCABULARY TRAINER</text>
+
+  <!-- XP + streak pills -->
+  <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="600">
+    <rect x="177" y="138" width="120" height="36" rx="18" fill="none" stroke="#6b5a1e" stroke-width="2"/>
+    <text x="237" y="162" text-anchor="middle" fill="#f5c842">⚡ XP</text>
+    <rect x="310" y="138" width="90" height="36" rx="18" fill="none" stroke="#7a3d1e" stroke-width="2"/>
+    <text x="355" y="162" text-anchor="middle" fill="#fb923c">🔥 Streak</text>
+  </g>
+
+  <!-- animated level bars -->
+  <g font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="14" fill="#c9c9e0">
+    <text x="40" y="206">HSK 1</text>
+    <rect x="100" y="194" width="320" height="10" rx="5" fill="#2a2a45"/>
+    <rect x="100" y="194" width="0" height="10" rx="5" fill="url(#bar)">
+      <animate attributeName="width" values="0;320;320;0" keyTimes="0;.35;.9;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="226">HSK 2</text>
+    <rect x="100" y="214" width="320" height="10" rx="5" fill="#2a2a45"/>
+    <rect x="100" y="214" width="0" height="10" rx="5" fill="url(#bar)">
+      <animate attributeName="width" values="0;0;320;320;0" keyTimes="0;.15;.5;.9;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="246">HSK 3</text>
+    <rect x="100" y="234" width="320" height="10" rx="5" fill="#2a2a45"/>
+    <rect x="100" y="234" width="0" height="10" rx="5" fill="url(#bar)">
+      <animate attributeName="width" values="0;0;120;120;0" keyTimes="0;.3;.7;.9;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- floating characters -->
+  <g font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="54" font-weight="700">
+    <text x="560" y="100" fill="#f5c842" opacity=".9">你
+      <animate attributeName="y" values="100;88;100" dur="3.2s" repeatCount="indefinite"/></text>
+    <text x="640" y="150" fill="#a78bfa" opacity=".9">好
+      <animate attributeName="y" values="150;136;150" dur="2.7s" repeatCount="indefinite"/></text>
+    <text x="730" y="100" fill="#34d399" opacity=".9">学
+      <animate attributeName="y" values="100;90;100" dur="3.6s" repeatCount="indefinite"/></text>
+    <text x="800" y="170" fill="#f87171" opacity=".9">语
+      <animate attributeName="y" values="170;156;170" dur="3s" repeatCount="indefinite"/></text>
+    <text x="600" y="215" fill="#60a5fa" opacity=".9">字
+      <animate attributeName="y" values="215;203;215" dur="3.4s" repeatCount="indefinite"/></text>
+  </g>
+</svg>
