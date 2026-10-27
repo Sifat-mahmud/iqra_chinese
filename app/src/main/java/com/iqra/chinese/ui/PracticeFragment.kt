@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Lifecycle
+import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
@@ -18,6 +19,7 @@ import com.iqra.chinese.data.HskData
 import com.iqra.chinese.data.Word
 import com.iqra.chinese.databinding.FragmentPracticeBinding
 import com.iqra.chinese.tts.TtsManager
+import com.iqra.chinese.util.PinyinMatch
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -33,7 +35,7 @@ class PracticeFragment : BaseFragment() {
     private var hint   = false
     private var busy   = false
     private var ttsJob: kotlinx.coroutines.Job? = null
-    // Words the user has answered correctly at least once this session
+    private var currentWordId: String? = null   // token to prevent stale auto-speak callbacks
     private val masteredOnce = mutableSetOf<String>()
 
     override fun onCreateView(i: LayoutInflater, c: ViewGroup?, s: Bundle?): View {
@@ -53,8 +55,24 @@ class PracticeFragment : BaseFragment() {
         b.btnSpeak.setOnClickListener    { speakCurrent() }
         b.btnSpeakSlow.setOnClickListener{ speakCurrentSlow() }
 
+        b.etPinyinAnswer.setOnEditorActionListener { _, id, _ ->
+            if (id == EditorInfo.IME_ACTION_NEXT) { b.etAnswer.requestFocus(); true } else false
+        }
         b.etAnswer.setOnEditorActionListener { _, id, _ ->
             if (id == EditorInfo.IME_ACTION_DONE) { check(); true } else false
+        }
+        // Backspace on an empty meaning field jumps back to the pinyin field —
+        // only when the field is already empty; normal deletion is untouched.
+        // Typing clears the "please type a value" error on that field
+        b.etPinyinAnswer.doAfterTextChanged { clearFieldError(b.etPinyinAnswer, b.tvPinyinError) }
+        b.etAnswer.doAfterTextChanged { clearFieldError(b.etAnswer, b.tvMeaningError) }
+        b.etAnswer.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_DEL && event.action == KeyEvent.ACTION_DOWN
+                && b.etAnswer.text.isNullOrEmpty()) {
+                b.etPinyinAnswer.requestFocus()
+                b.etPinyinAnswer.setSelection(b.etPinyinAnswer.text?.length ?: 0)
+                true
+            } else false
         }
         vm.xp.observe(viewLifecycleOwner) { _b?.tvXpTop?.text = "⚡ $it XP" }
     }
@@ -108,7 +126,7 @@ class PracticeFragment : BaseFragment() {
 
     private fun load(l: Int, restorePosition: Boolean = false) {
         level = l; words = HskData.wordsFor(l)
-        idx   = if (restorePosition && vm.prefs.lastLevel == l) vm.prefs.lastWordIdx else 0
+        idx   = if (restorePosition && words.isNotEmpty()) vm.prefs.wordIdxFor(l) % words.size else 0
         queue.clear(); masteredOnce.clear(); hint = false
         buildPills(); show()
     }
@@ -139,11 +157,14 @@ class PracticeFragment : BaseFragment() {
         b.tvReview.text = "⟳ ${queue.size} review"
         b.tvHint.visibility = if (hint) View.VISIBLE else View.GONE
         if (hint) b.tvHint.text = "💡  ${w.meaning.first().uppercaseChar()} — ${w.meaning.length} letters"
+        b.etPinyinAnswer.setText(""); b.etPinyinAnswer.setBackgroundResource(R.drawable.bg_input)
         b.etAnswer.setText(""); b.etAnswer.setBackgroundResource(R.drawable.bg_input)
+        b.tvPinyinError.visibility = View.GONE
+        b.tvMeaningError.visibility = View.GONE
+        b.etPinyinAnswer.requestFocus()
 
-        // Save last position
-        vm.prefs.lastLevel   = level
-        vm.prefs.lastWordIdx = idx
+        // Save last position — per level, so each HSK level remembers its own spot
+        vm.prefs.setWordIdxFor(level, idx)
 
         // Show TTS status on speak button
         val ttsReady = TtsManager.isReady()
@@ -152,18 +173,37 @@ class PracticeFragment : BaseFragment() {
 
         loadDots(w.id)
 
-        // Auto-pronounce: speak character, then meaning (if shown in settings)
+        // Auto-pronounce: loop speak → 1s pause → speak, until card changes
         if (TtsManager.isReady()) {
-            ttsJob?.cancel()
-            TtsManager.stop()
-            TtsManager.speak(w.char)
-            if (vm.showMeaning) {
-                ttsJob = viewLifecycleOwner.lifecycleScope.launch {
-                    delay(1200)
-                    if (_b != null) TtsManager.speak(w.meaning.split("/").first().trim())
-                }
-            }
+            stopAutoSpeak()
+            currentWordId = w.id
+            autoSpeak(w.char, w.id)
         }
+    }
+
+    /**
+     * Speaks [text], then after a 1-second pause speaks again — looping
+     * indefinitely until [currentWordId] changes (i.e. user moves to next card)
+     * or the fragment is destroyed. Never starts a new utterance before the
+     * previous one finishes.
+     */
+    private fun autoSpeak(text: String, wordId: String) {
+        if (currentWordId != wordId || _b == null) return
+        TtsManager.speak(text, onDone = {
+            // Only loop if we're still on the same card
+            if (currentWordId != wordId || _b == null) return@speak
+            ttsJob = viewLifecycleOwner.lifecycleScope.launch {
+                delay(1000)
+                if (currentWordId == wordId && _b != null) autoSpeak(text, wordId)
+            }
+        })
+    }
+
+    private fun stopAutoSpeak() {
+        currentWordId = null
+        ttsJob?.cancel()
+        ttsJob = null
+        TtsManager.stop()
     }
 
     private fun loadDots(wordId: String) {
@@ -183,24 +223,47 @@ class PracticeFragment : BaseFragment() {
         }
     }
 
+    /** Red border + message under a field the user left empty on Check. */
+    private fun showFieldError(field: EditText, errorView: TextView) {
+        field.setBackgroundResource(R.drawable.bg_input_err)
+        errorView.visibility = View.VISIBLE
+    }
+
+    private fun clearFieldError(field: EditText, errorView: TextView) {
+        field.setBackgroundResource(R.drawable.bg_input)
+        errorView.visibility = View.GONE
+    }
+
     private fun check() {
         if (busy) return
-        val input = b.etAnswer.text.toString().trim().lowercase()
-        if (input.isEmpty()) return
+        val pinyinInput = b.etPinyinAnswer.text.toString().trim()
+        val meaningInput = b.etAnswer.text.toString().trim().lowercase()
+        val pinyinEmpty  = pinyinInput.isEmpty()
+        val meaningEmpty = meaningInput.isEmpty()
+        if (pinyinEmpty || meaningEmpty) {
+            // Tell the user which field(s) still need a value
+            if (pinyinEmpty)  showFieldError(b.etPinyinAnswer, b.tvPinyinError)
+            if (meaningEmpty) showFieldError(b.etAnswer, b.tvMeaningError)
+            if (pinyinEmpty) b.etPinyinAnswer.requestFocus() else b.etAnswer.requestFocus()
+            return
+        }
+
         val w = current()
-        val correct = w.meaning.lowercase()
-        val passed  = correct == input
-            || correct.split("/").any { it.trim() == input }
-            || (correct.contains(input) && input.length > 2)
+        val correctMeaning = w.meaning.lowercase()
+        val meaningOk = correctMeaning == meaningInput
+            || correctMeaning.split("/").any { it.trim() == meaningInput }
+            || (correctMeaning.contains(meaningInput) && meaningInput.length > 2)
+        val pinyinOk = PinyinMatch.matches(pinyinInput, w.pinyin)
+        val passed = pinyinOk && meaningOk
 
         vm.record(w.id, "word", level, passed)
 
         if (passed) {
-            // ✓ Correct — mark mastered, flash green, advance
+            // ✓ Both correct — mark mastered, flash green, advance
             masteredOnce.add(w.id)
             busy = true
-            ttsJob?.cancel()
-            TtsManager.stop()
+            stopAutoSpeak()
+            b.etPinyinAnswer.setBackgroundResource(R.drawable.bg_input_ok)
             b.etAnswer.setBackgroundResource(R.drawable.bg_input_ok)
             flashCard()
             if (TtsManager.isReady()) TtsManager.speak(w.char)
@@ -208,14 +271,28 @@ class PracticeFragment : BaseFragment() {
                 delay(700); if (_b != null) next(true, false); busy = false
             }
         } else {
-            // ✗ Wrong — flash red, clear field, stay on this word
-            b.etAnswer.setBackgroundResource(R.drawable.bg_input_err)
+            // ✗ Wrong — flash red on whichever field(s) are incorrect, stay on this word
+            b.etPinyinAnswer.setBackgroundResource(
+                if (pinyinOk) R.drawable.bg_input_ok else R.drawable.bg_input_err)
+            b.etAnswer.setBackgroundResource(
+                if (meaningOk) R.drawable.bg_input_ok else R.drawable.bg_input_err)
             viewLifecycleOwner.lifecycleScope.launch {
                 delay(600)
                 if (_b == null) return@launch
-                b.etAnswer.setText("")
-                b.etAnswer.setBackgroundResource(R.drawable.bg_input)
-                b.etAnswer.requestFocus()
+                if (!pinyinOk) {
+                    b.etPinyinAnswer.setText("")
+                    b.etPinyinAnswer.setBackgroundResource(R.drawable.bg_input)
+                } else {
+                    b.etPinyinAnswer.setBackgroundResource(R.drawable.bg_input)
+                }
+                if (!meaningOk) {
+                    b.etAnswer.setText("")
+                    b.etAnswer.setBackgroundResource(R.drawable.bg_input)
+                } else {
+                    b.etAnswer.setBackgroundResource(R.drawable.bg_input)
+                }
+                // Focus whichever field is still wrong (pinyin first)
+                if (!pinyinOk) b.etPinyinAnswer.requestFocus() else b.etAnswer.requestFocus()
                 // Show hint after wrong answer
                 hint = true
                 b.tvHint.visibility = View.VISIBLE
@@ -258,8 +335,7 @@ class PracticeFragment : BaseFragment() {
     }
 
     override fun onDestroyView() {
-        ttsJob?.cancel()
-        TtsManager.stop()
+        stopAutoSpeak()
         super.onDestroyView()
         _b = null
     }

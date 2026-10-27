@@ -53,22 +53,30 @@ class StatsFragment : BaseFragment() {
                 b.pbPassFail.progress = (tp / total * 100).toInt()
                 b.tvPass.text = "✓ $tp"; b.tvFail.text = "✗ $tf"
 
-                // Weekly chart
-                val days = listOf("M","T","W","T","F","S","S")
-                val now  = System.currentTimeMillis()
-                val vals = (0..6).map { i ->
-                    val s = now - (6 - i) * 86_400_000L
-                    atts.sumOf { r -> r.history.count { h -> h.ts in s until s + 86_400_000L && h.passed } }.toFloat()
+                // Weekly charts — bucketed by STUDY day (rolls over at the
+                // configured day-start time), anchored on the current study
+                // day's start so buckets line up with the keys touchStreak() stores.
+                val anchor = vm.repo.prefs.studyDayKey()
+                val dayStarts = (0..6).map { i ->
+                    (anchor.clone() as java.util.Calendar).apply {
+                        add(java.util.Calendar.DAY_OF_YEAR, -(6 - i))
+                    }
+                }
+                val labelFmt = java.text.SimpleDateFormat("EEEEE", java.util.Locale.ENGLISH)
+                val days = dayStarts.map { labelFmt.format(it.time) }
+                val vals = dayStarts.map { startCal ->
+                    val s = startCal.timeInMillis
+                    val e = (startCal.clone() as java.util.Calendar).apply {
+                        add(java.util.Calendar.DAY_OF_YEAR, 1)
+                    }.timeInMillis
+                    atts.sumOf { r -> r.history.count { h -> h.ts in s until e && h.passed } }.toFloat()
                 }
                 b.barChart.setData(vals, days)
 
-                // Time-studied chart (last 7 days, in minutes)
+                // Time-studied chart (last 7 study days, in minutes)
                 val timeHist = vm.repo.prefs.getTimeHistory()
                 val fmt = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault())
-                val timeVals = (0..6).map { i ->
-                    val d = fmt.format(java.util.Date(now - (6 - i) * 86_400_000L))
-                    (timeHist[d] ?: 0) / 60f   // seconds → minutes
-                }
+                val timeVals = dayStarts.map { (timeHist[fmt.format(it.time)] ?: 0) / 60f }
                 b.timeChart.setData(timeVals, days)
 
                 val totalSecs = timeHist.values.sum() + vm.repo.prefs.dailySecs.let {

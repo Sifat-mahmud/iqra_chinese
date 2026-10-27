@@ -53,6 +53,21 @@ class AuthFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Intercept system back press — close the app if not yet logged in
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : androidx.activity.OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (FirebaseManager.isLoggedIn) {
+                        isEnabled = false
+                        requireActivity().onBackPressedDispatcher.onBackPressed()
+                    } else {
+                        requireActivity().finishAffinity()
+                    }
+                }
+            }
+        )
+
         val tvTitle        = view.findViewById<TextView>(R.id.tvAuthTitle)
         val tvToggle       = view.findViewById<TextView>(R.id.tvAuthToggle)
         val tvForgot       = view.findViewById<TextView>(R.id.tvForgotPassword)
@@ -80,7 +95,11 @@ class AuthFragment : BaseFragment() {
         updateUi()
 
         tvToggle.setOnClickListener { isSignUp = !isSignUp; updateUi() }
-        btnBack.setOnClickListener  { findNavController().navigateUp() }
+        // Only allow back navigation if already logged in (settings → auth)
+        btnBack.setOnClickListener {
+            if (FirebaseManager.isLoggedIn) findNavController().navigateUp()
+            else requireActivity().finishAffinity() // close app instead of bypassing login
+        }
 
         // ── Forgot password ───────────────────────────────────────────────────
         tvForgot.setOnClickListener {

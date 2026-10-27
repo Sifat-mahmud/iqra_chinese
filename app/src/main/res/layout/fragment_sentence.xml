@@ -76,12 +76,35 @@
                 android:layout_marginStart="10dp"/>
         </LinearLayout>
 
-        <EditText android:id="@+id/etAnswer" android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/etPinyinAnswer" android:layout_width="match_parent"
+            android:layout_height="52dp" android:background="@drawable/bg_input"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:hint="Type the pinyin (e.g. nihaoma)…" android:textColorHint="@color/text_muted"
+            android:imeOptions="actionNext" android:inputType="text"
+            android:paddingHorizontal="16dp" android:layout_marginBottom="0dp"/>
+            <TextView android:id="@+id/tvPinyinError" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:visibility="gone"
+                android:text="Please type the pinyin to check"
+                android:textColor="@color/ruby" android:textSize="12sp"
+                android:layout_marginTop="4dp" android:paddingHorizontal="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="10dp">
+            <EditText android:id="@+id/etAnswer" android:layout_width="match_parent"
             android:layout_height="52dp" android:background="@drawable/bg_input"
             android:textColor="@color/text_primary" android:textSize="15sp"
             android:hint="Type the English meaning…" android:textColorHint="@color/text_muted"
             android:imeOptions="actionDone" android:inputType="text"
-            android:paddingHorizontal="16dp" android:layout_marginBottom="10dp"/>
+            android:paddingHorizontal="16dp" android:layout_marginBottom="0dp"/>
+            <TextView android:id="@+id/tvMeaningError" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:visibility="gone"
+                android:text="Please type the English meaning to check"
+                android:textColor="@color/ruby" android:textSize="12sp"
+                android:layout_marginTop="4dp" android:paddingHorizontal="4dp"/>
+        </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -93,5 +116,17 @@
                 android:text="Skip →" android:backgroundTint="@color/bg3"
                 android:textColor="@color/text_secondary" android:textSize="11sp"/>
         </LinearLayout>
+
+        <!-- Word-by-word breakdown of the current sentence, built from the
+             existing HSK word list — populated programmatically in code -->
+        <TextView android:id="@+id/tvWordBreakdownHeader"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="WORDS IN THIS SENTENCE" android:textSize="10sp"
+            android:textColor="@color/text_muted" android:letterSpacing="0.1"
+            android:layout_marginTop="18dp" android:layout_marginBottom="8dp"/>
+
+        <LinearLayout android:id="@+id/llWordBreakdown"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"/>
     </LinearLayout>
 </ScrollView>

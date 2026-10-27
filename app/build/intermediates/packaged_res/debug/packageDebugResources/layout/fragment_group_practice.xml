@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+            <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@drawable/ic_back" android:background="@drawable/bg_pill" android:padding="8dp"/>
+            <TextView android:id="@+id/tvTitle" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Group" android:textSize="15sp"
+                android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginStart="10dp"/>
+            <TextView android:id="@+id/tvCount" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0 words"
+                android:textSize="11sp" android:textColor="@color/text_muted"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Group is empty."
+            android:gravity="center" android:textColor="@color/text_muted" android:textSize="14sp"
+            android:padding="40dp" android:visibility="gone"/>
+
+        <TextView android:id="@+id/tvCounter" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="1/0"
+            android:textSize="11sp" android:textColor="@color/text_muted"
+            android:fontFamily="monospace" android:gravity="end" android:layout_marginBottom="8dp"/>
+
+        
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg2" app:cardCornerRadius="20dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                <TextView android:id="@+id/tvChar" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="60sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvPinyin" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="16sp" android:textColor="@color/violet"
+                    android:textStyle="italic" android:minHeight="22dp" android:layout_marginBottom="4dp"/>
+                <TextView android:id="@+id/tvMeaning" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textSize="14sp" android:textColor="@color/text_secondary" android:minHeight="20dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Speak button -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <ImageButton android:id="@+id/btnSpeak"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:src="@drawable/ic_speak"
+                android:background="@drawable/bg_chip_gold"
+                android:padding="10dp"
+                android:contentDescription="Speak"/>
+            <ImageButton android:id="@+id/btnSpeakSlow"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:src="@drawable/ic_speak_slow"
+                android:background="@drawable/bg_hint"
+                android:padding="10dp"
+                android:contentDescription="Speak slowly"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <EditText android:id="@+id/etAnswer" android:layout_width="match_parent"
+            android:layout_height="52dp" android:background="@drawable/bg_input"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:hint="Type meaning…" android:textColorHint="@color/text_muted"
+            android:imeOptions="actionDone" android:inputType="text"
+            android:paddingHorizontal="16dp" android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnCheck" android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="Check ✓" android:textStyle="bold"
+                android:backgroundTint="@color/gold" android:textColor="@color/black" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnSkip" android:layout_width="80dp" android:layout_height="48dp"
+                android:text="Skip →" android:backgroundTint="@color/bg3"
+                android:textColor="@color/text_secondary" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

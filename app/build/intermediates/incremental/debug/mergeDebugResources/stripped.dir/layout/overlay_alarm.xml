@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Compact overlay widget — appears on top of any app or lock screen.
+     Intentionally small (max 300dp wide) so it doesn't block the user's screen. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlayRoot"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_alarm_overlay"
+    android:padding="16dp"
+    android:elevation="10dp">
+
+    <!-- Header row: app icon + name -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Iqra Chinese"
+            android:textSize="13sp" android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextClock
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:format12Hour="hh:mm a"
+            android:format24Hour="HH:mm"
+            android:textSize="13sp" android:textColor="#BBFFFFFF"/>
+    </LinearLayout>
+
+    <!-- Alarm message -->
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="⏰ Study alarm — 快学习！"
+        android:textSize="15sp" android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvOverlaySubtext"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="You haven't completed today's study goal"
+        android:textSize="12sp" android:textColor="#CCFFFFFF"
+        android:layout_marginBottom="14dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="end">
+
+        <Button android:id="@+id/btnOverlaySnooze"
+            android:layout_width="wrap_content" android:layout_height="36dp"
+            android:text="Snooze"
+            android:textSize="12sp" android:textColor="#FFFFFF"
+            android:backgroundTint="#44FFFFFF"
+            android:layout_marginEnd="8dp"/>
+
+        <Button android:id="@+id/btnOverlayStop"
+            android:layout_width="wrap_content" android:layout_height="36dp"
+            android:text="Stop →"
+            android:textSize="12sp" android:textColor="#000000"
+            android:backgroundTint="#FFD700"/>
+    </LinearLayout>
+
+</LinearLayout>

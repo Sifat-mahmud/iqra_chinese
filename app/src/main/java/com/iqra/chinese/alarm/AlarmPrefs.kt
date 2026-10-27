@@ -60,7 +60,9 @@ class AlarmPrefs(ctx: Context) {
     }
 
     private fun todayKey(): String {
-        val c = Calendar.getInstance()
+        // Keyed off the configured study-day start, NOT the calendar date, so
+        // the once-per-phase snooze resets exactly when the study day does.
+        val c = Calendar.getInstance().apply { timeInMillis = todayStartMs }
         return "${c.get(Calendar.YEAR)}_${c.get(Calendar.DAY_OF_YEAR)}"
     }
 }

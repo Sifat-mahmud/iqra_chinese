@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.iqra.chinese.ui.HomeFragment" android:label="Home">
+        <action android:id="@+id/action_home_to_practice"
+            app:destination="@id/practiceFragment"/>
+        <action android:id="@+id/action_home_to_sentences"
+            app:destination="@id/sentenceFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/practiceFragment"
+        android:name="com.iqra.chinese.ui.PracticeFragment" android:label="Practice">
+        <argument android:name="level" app:argType="integer" android:defaultValue="1"/>
+    </fragment>
+
+    <fragment android:id="@+id/sentenceFragment"
+        android:name="com.iqra.chinese.ui.SentenceFragment" android:label="Sentences">
+        <argument android:name="level" app:argType="integer" android:defaultValue="1"/>
+    </fragment>
+
+    <fragment android:id="@+id/groupsFragment"
+        android:name="com.iqra.chinese.ui.GroupsFragment" android:label="Groups">
+        <action android:id="@+id/action_groups_to_groupPractice"
+            app:destination="@id/groupPracticeFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/groupPracticeFragment"
+        android:name="com.iqra.chinese.ui.GroupPracticeFragment" android:label="Group Practice">
+        <argument android:name="name" app:argType="string" android:defaultValue=""/>
+    </fragment>
+
+    <fragment android:id="@+id/testFragment"
+        android:name="com.iqra.chinese.ui.TestFragment" android:label="Test"/>
+
+    <fragment android:id="@+id/statsFragment"
+        android:name="com.iqra.chinese.ui.StatsFragment" android:label="Stats"/>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.iqra.chinese.ui.SettingsFragment" android:label="Settings">
+        <action android:id="@+id/action_settings_to_auth"
+            app:destination="@id/authFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/authFragment"
+        android:name="com.iqra.chinese.ui.AuthFragment" android:label="Account"/>
+</navigation>

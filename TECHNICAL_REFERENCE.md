@@ -220,7 +220,7 @@ Root `build.gradle` additionally has: `id 'com.google.gms.google-services' versi
    - 20 sentence entries (filenames `s_s<level>_<index>.mp3`, e.g. `s_s1_1.mp3`)
 3. **Intent-based fallback** — last resort, fires an Android TTS intent for the OS to handle externally
 
-**Sentence audio generation history:** Initially silent placeholders were used to keep the build compiling. Real audio was then generated using a **from-scratch Klatt-style formant synthesiser** (pure Python/numpy/scipy, no network/model downloads) — maps each Chinese character to pinyin (initial+rhyme+tone) via a hardcoded `CHAR_PINYIN` dict, synthesises vowels via resonator filters tuned to Mandarin formant frequencies, consonants via noise/burst/nasal models, and applies the 4 Mandarin tone F0 contours. Output encoded to MP3 via FFmpeg at 56kbps/22050Hz/mono (matching the original word-audio quality). This is a one-time fallback approach — if network/real TTS becomes available in a future session, regenerating via `generate_sentence_audio.py` (uses `gTTS`, requires `pip install gtts` + internet) produces much higher quality audio.
+**Sentence audio generation history:** Initially silent placeholders were used to keep the build compiling, then upgraded to a from-scratch Klatt-style formant synthesiser (pure Python/numpy/scipy) as an interim solution since the sandbox has no network access for real TTS. **Final resolution:** the user generated all 20 sentences using **TTS.ai's free anonymous API** (`POST https://api.tts.ai/v1/tts/`, model `melotts`, voice `ZH`, no API key required — works via Postman since it allows server-to-server calls, unlike FreeTTS which blocks non-browser requests) and uploaded the resulting MP3s, which Claude matched to the correct `s_sN_M.mp3` filenames by Chinese text content and committed to `res/raw/`, replacing the formant-synthesised versions. Files are 192kbps/48kHz neural TTS — natural-sounding human speech, not synthetic. If sentences are ever added/changed in the future, repeat this same TTS.ai Postman flow (see chat history "search chine text to audio again" → API discovery thread for the exact request/response format and polling steps).
 
 `SentenceAudioCache` separately handles **on-demand** TTS generation+caching for sentences not in the bundled map (used by `SentenceFragment.preCacheLevel()` to pre-warm audio in the background when a level is opened).
 
@@ -312,7 +312,7 @@ Generated from a user-uploaded JPG (orange gradient rounded square with "学" ch
 
 ## 7. Things NOT Yet Implemented (potential future asks)
 
-- Real (non-synthesized) sentence TTS audio — requires running `generate_sentence_audio.py` with network access
+
 - Push notifications (FCM) — only Realtime Database polling/listening is used currently, no FCM integration
 - Admin web dashboard for banners (currently Postman-only)
 - Localisation/i18n (app is English-only UI with Chinese learning content)

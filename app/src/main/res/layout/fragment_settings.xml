@@ -241,6 +241,20 @@
                     android:layout_height="44dp" android:text="Reset Progress"
                     android:backgroundTint="#1AE8455A" android:textColor="@color/ruby"
                     android:layout_marginBottom="8dp"/>
+                <Button android:id="@+id/btnReplayTour"
+                    android:layout_width="match_parent" android:layout_height="44dp"
+                    android:text="🗺  Replay App Tour"
+                    android:textSize="13sp" android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/bg3"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button android:id="@+id/btnOverlayPermission"
+                    android:layout_width="match_parent" android:layout_height="44dp"
+                    android:text="🔲  Enable Alarm Overlay Permission"
+                    android:textSize="13sp" android:textColor="@color/text_primary"
+                    android:backgroundTint="@color/bg3"
+                    android:layout_marginBottom="8dp"/>
+
                 <Button android:id="@+id/btnResetAll" android:layout_width="match_parent"
                     android:layout_height="44dp" android:text="Reset Everything"
                     android:backgroundTint="@color/bg3" android:textColor="@color/text_secondary"/>

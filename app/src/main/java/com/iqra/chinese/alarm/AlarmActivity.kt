@@ -45,12 +45,16 @@ class AlarmActivity : AppCompatActivity() {
         val btnSnooze = findViewById<Button>(R.id.btnAlarmSnooze)
         val btnStop   = findViewById<Button>(R.id.btnAlarmStop)
 
+        // Use the goal the user actually set (5–60 min), not a fixed 30
+        val goalMin = getSharedPreferences("iqra", MODE_PRIVATE)
+            .getInt("goal_min", 30).coerceIn(5, 60)
+
         if (phase == 0) {
             tvTitle.text = "📚 Study Reminder"
-            tvMsg.text   = "You haven't completed 30 minutes of practice today.\nStudy now to keep your streak alive! 🔥"
+            tvMsg.text   = "You haven't completed $goalMin minutes of practice today.\nStudy now to keep your streak alive! 🔥"
         } else {
             tvTitle.text = "⏰ STUDY NOW — 快学习！"
-            tvMsg.text   = "Over 12 hours without 30 min of practice.\nComplete your goal to silence this alarm."
+            tvMsg.text   = "Over 12 hours without $goalMin min of practice.\nComplete your goal to silence this alarm."
         }
 
         // Snooze — only available once per phase per day

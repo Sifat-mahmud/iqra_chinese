@@ -27,6 +27,7 @@ import com.iqra.chinese.tts.TtsManager
 import com.iqra.chinese.tts.BundledTts
 import com.iqra.chinese.data.*
 import com.iqra.chinese.databinding.ActivityMainBinding
+import com.iqra.chinese.ui.AppTour
 import com.iqra.chinese.ui.MainViewModel
 import com.iqra.chinese.ui.VMFactory
 import kotlinx.coroutines.launch
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nav: NavController
 
     private val notifLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()) { AlarmScheduler.schedule(this) }
+        ActivityResultContracts.RequestPermission()) { AlarmScheduler.scheduleWeek(this) }
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
@@ -59,6 +60,11 @@ class MainActivity : AppCompatActivity() {
             binding.bottomNav.visibility = if (dest.id in hide) View.GONE else View.VISIBLE
         }
 
+        // Force login — redirect to AuthFragment if not signed in
+        if (!FirebaseManager.isLoggedIn) {
+            nav.navigate(R.id.authFragment)
+        }
+
         vm.ach.observe(this) { a ->
             a ?: return@observe
             Snackbar.make(binding.root, "${a.emoji} ${a.title} unlocked! +${a.xp} XP", 3000)
@@ -72,11 +78,27 @@ class MainActivity : AppCompatActivity() {
         BundledTts.init(this)
         FirebaseManager.logAppOpen()
         showMiuiAlarmPromptIfNeeded()
+        showOverlayPermissionPromptIfNeeded()
         showBannerIfAvailable()
+
+        // First-login tour — runs once after all views are laid out
+        binding.root.post { startAppTourIfNeeded() }
     }
 
-    override fun onResume()  { super.onResume();  vm.startTimer() }
+    override fun onResume()  {
+        super.onResume()
+        vm.startTimer()
+        vm.repo.prefs.turnOffAlarmsForTodayIfGoalMet()
+        // Pull this account's cloud progress onto the device if that hasn't happened yet
+        vm.ensureRestored()
+    }
     override fun onPause()   { super.onPause();   vm.stopTimer()  }
+
+    /** App no longer visible (home button, app switch, screen off) — save progress to the cloud. */
+    override fun onStop() {
+        super.onStop()
+        vm.flushProgress()
+    }
 
     override fun onDestroy() {
         super.onDestroy()
@@ -90,7 +112,7 @@ class MainActivity : AppCompatActivity() {
             ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
                 != PackageManager.PERMISSION_GRANTED)
             notifLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-        else AlarmScheduler.schedule(this)
+        else AlarmScheduler.scheduleWeek(this)
     }
 
     private fun showMiuiAlarmPromptIfNeeded() {
@@ -312,6 +334,63 @@ class MainActivity : AppCompatActivity() {
         FirebaseManager.logEvent("banner_shown", android.os.Bundle().apply {
             putString("banner_id", banner.id)
         })
+    }
+
+    private fun startAppTourIfNeeded() {
+        if (!FirebaseManager.isLoggedIn) return
+        if (AppTour.isDone(this)) return
+
+        val bottomNav     = binding.bottomNav
+        // Bottom nav menu items as targets for tabs
+        val homeTab       = bottomNav.findViewById<View>(R.id.homeFragment)     ?: bottomNav
+        val sentenceTab   = bottomNav.findViewById<View>(R.id.sentenceFragment) ?: bottomNav
+        val statsTab      = bottomNav.findViewById<View>(R.id.statsFragment)    ?: bottomNav
+        val settingsTab   = bottomNav.findViewById<View>(R.id.settingsFragment) ?: bottomNav
+
+        // Home-screen views (visible right now)
+        val wordCardArea  = findViewById<View?>(R.id.llLevels)   ?: homeTab
+        val dailyBar      = findViewById<View?>(R.id.pbDaily)    ?: homeTab
+        val streakView    = findViewById<View?>(R.id.tvStreak)   ?: homeTab
+
+        AppTour.startTour(
+            activity      = this,
+            wordCardArea  = wordCardArea,
+            dailyBar      = dailyBar,
+            streakView    = streakView,
+            sentenceTab   = sentenceTab,
+            settingsTab   = settingsTab,
+            statsTab      = statsTab,
+            homeTab       = homeTab
+        )
+    }
+
+    private fun showOverlayPermissionPromptIfNeeded() {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.M) return
+        if (android.provider.Settings.canDrawOverlays(this)) return
+
+        // Re-ask once per app launch until the permission is actually granted —
+        // previously this was marked "shown" forever after the first prompt,
+        // so if the user dismissed it even once, the overlay silently never
+        // worked again with no way to re-trigger the request.
+        val prefs = getSharedPreferences("iqra_meta", android.content.Context.MODE_PRIVATE)
+        val lastPromptMs = prefs.getLong("overlay_prompt_last_ms", 0L)
+        val now = System.currentTimeMillis()
+        // Don't nag more than once every 12 hours
+        if (now - lastPromptMs < 12 * 3_600_000L) return
+        prefs.edit().putLong("overlay_prompt_last_ms", now).apply()
+
+        android.app.AlertDialog.Builder(this)
+            .setTitle("Alarm overlay permission")
+            .setMessage("To show a small alarm widget over other apps when your study alarm fires, Iqra Chinese needs the \"Display over other apps\" permission.\n\nWithout it, you'll still get the full-screen alarm, but the compact overlay won't appear over other apps.\n\nTap Allow to enable it now.")
+            .setPositiveButton("Allow") { _, _ ->
+                val intent = android.content.Intent(
+                    android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    android.net.Uri.parse("package:$packageName")
+                )
+                startActivity(intent)
+            }
+            .setNegativeButton("Not now", null)
+            .show()
     }
 
     private fun releasePlayer() {

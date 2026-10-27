@@ -64,7 +64,7 @@
                             android:layout_height="wrap_content" android:text="0m 00s"
                             android:textSize="15sp" android:textStyle="bold" android:textColor="@color/jade"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="TODAY / 30m" android:textSize="9sp" android:textColor="@color/text_muted"/>
+                            android:text="TODAY" android:textSize="9sp" android:textColor="@color/text_muted"/>
                     </LinearLayout>
                 </LinearLayout>
 

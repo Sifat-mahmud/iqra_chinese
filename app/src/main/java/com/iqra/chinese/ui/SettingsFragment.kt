@@ -51,6 +51,9 @@ class SettingsFragment : BaseFragment() {
             override fun onStopTrackingTouch(sb: android.widget.SeekBar?) {
                 val newGoal = sb?.progress?.coerceIn(5, 60) ?: 30
                 vm.repo.prefs.dailyGoalMinutes = newGoal
+                // If lowering the goal now means today's already-studied time
+                // satisfies it, silence any currently-active alarm immediately
+                vm.repo.prefs.turnOffAlarmsForTodayIfGoalMet()
                 // Refresh dependent UI immediately
                 vm.daily.value?.let { secs ->
                     b.tvDaily.text     = "${secs/60}m ${(secs%60).toString().padStart(2,'0')}s / ${newGoal}m"
@@ -65,9 +68,23 @@ class SettingsFragment : BaseFragment() {
         refreshAccountCard()
         b.btnSignInOut.setOnClickListener {
             if (FirebaseManager.isLoggedIn) {
-                FirebaseManager.signOut()
-                refreshAccountCard()
-                Toast.makeText(context, "Signed out", Toast.LENGTH_SHORT).show()
+                b.btnSignInOut.isEnabled = false
+                viewLifecycleOwner.lifecycleScope.launch {
+                    try {
+                        // Push the latest progress while still signed in, so it
+                        // is on the server before the session ends
+                        vm.repo.syncNowToCloud()
+                    } finally {
+                        FirebaseManager.signOut()
+                        // Next sign-in must merge the cloud copy before pushing anything
+                        vm.repo.prefs.restoredUid = ""
+                    }
+                    if (_b != null) {
+                        b.btnSignInOut.isEnabled = true
+                        refreshAccountCard()
+                        Toast.makeText(context, "Signed out", Toast.LENGTH_SHORT).show()
+                    }
+                }
             } else {
                 findNavController().navigate(R.id.action_settings_to_auth)
             }
@@ -80,9 +97,7 @@ class SettingsFragment : BaseFragment() {
             b.btnSyncNow.isEnabled = false
             b.btnSyncNow.text = "Syncing..."
             viewLifecycleOwner.lifecycleScope.launch {
-                vm.repo.prefs.lastBackupDate = ""   // clear guard so it runs
-                val attempts = vm.repo.attemptDao.allOnce()
-                val ok = FirebaseManager.backupStatsIfDue(vm.repo.prefs, attempts)
+                val ok = vm.syncNow()
                 b.btnSyncNow.isEnabled = true
                 b.btnSyncNow.text = "Sync Now"
                 if (ok) {
@@ -121,7 +136,7 @@ class SettingsFragment : BaseFragment() {
             alarmPrefs.dayStartMinute = b.npMinute.value
             b.tvDayStartConfirm.text  =
                 "✅ Day starts at %02d:%02d".format(b.npHour.value, b.npMinute.value)
-            AlarmScheduler.schedule(requireContext())
+            AlarmScheduler.rescheduleWeek(requireContext())
             refreshAlarmPhase(alarmPrefs)
             Toast.makeText(context, "Day start saved", Toast.LENGTH_SHORT).show()
         }
@@ -193,6 +208,34 @@ class SettingsFragment : BaseFragment() {
                 .setPositiveButton("Delete All") { _,_ -> vm.resetAll(); Toast.makeText(context,"All data cleared",Toast.LENGTH_SHORT).show() }
                 .setNegativeButton("Cancel", null).show()
         }
+
+        b.btnReplayTour.setOnClickListener {
+            AppTour.resetAll(requireContext())
+            Toast.makeText(context, "Tour reset — open app again to replay", Toast.LENGTH_SHORT).show()
+        }
+
+        // Overlay permission — shows current status, tapping opens system settings if not granted
+        updateOverlayButtonState()
+        b.btnOverlayPermission.setOnClickListener {
+            if (android.provider.Settings.canDrawOverlays(requireContext())) {
+                Toast.makeText(context, "Already enabled ✓", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = android.content.Intent(
+                    android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    android.net.Uri.parse("package:${requireContext().packageName}")
+                )
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun updateOverlayButtonState() {
+        if (_b == null) return
+        val granted = android.provider.Settings.canDrawOverlays(requireContext())
+        b.btnOverlayPermission.text = if (granted)
+            "✅  Alarm Overlay Permission Enabled"
+        else
+            "🔲  Enable Alarm Overlay Permission"
     }
 
     private fun getTtsInstallGuide(): String {
@@ -323,6 +366,7 @@ Install Chinese TTS:
         refreshAccountCard()
         refreshAlarmPhase(AlarmPrefs(requireContext()))
         startCountdown()
+        updateOverlayButtonState()
     }
 
     override fun onPause() {

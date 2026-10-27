@@ -38,8 +38,11 @@ class MainViewModel(val repo: Repository) : ViewModel() {
                 _xp.postValue(repo.prefs.xp)
                 _streak.postValue(repo.prefs.streak)
                 _daily.postValue(repo.prefs.dailySecs)
-                // Once a day: push backup to Firebase (no-ops if already done today / not logged in)
-                repo.maybeBackupToFirebase()
+                // Network work runs in its own coroutines and is never awaited here,
+                // so a slow/offline connection can't stall the study timer.
+                if (repo.backupWanted()) viewModelScope.launch { repo.maybeBackupToFirebase() }
+                // Light progress push once a minute while studying
+                if (repo.prefs.dailySecs % 60 == 0) viewModelScope.launch { repo.flushProgressToCloud() }
             }
         }
     }
@@ -67,8 +70,39 @@ class MainViewModel(val repo: Repository) : ViewModel() {
         }
     }
 
-    /** Force an immediate Firebase backup (called from Settings "Sync now" button). */
-    fun manualBackup() = viewModelScope.launch { repo.maybeBackupToFirebase() }
+    /**
+     * Settings "Sync now": merge the cloud copy in first if that hasn't happened yet
+     * (pushing is blocked until then), then push everything and wait for the server.
+     */
+    suspend fun syncNow(): Boolean {
+        val uid = FirebaseManager.uid ?: return false
+        if (repo.prefs.restoredUid != uid) {
+            if (!FirebaseManager.restoreStats(repo.prefs, repo.attemptDao)) return false
+            refresh()
+        }
+        return repo.syncNowToCloud()
+    }
+
+    /** Push progress when the user leaves the app (background / screen off). */
+    fun flushProgress() {
+        // Study time is queued synchronously — nothing can interrupt it
+        FirebaseManager.flushDailyTime(repo.prefs)
+        // Stats + changed attempts need a Room read first, so that part is a coroutine
+        viewModelScope.launch { repo.flushProgressToCloud() }
+    }
+
+    private var restoreJob: Job? = null
+
+    /**
+     * Makes sure this account's cloud data has been merged into the device — covers
+     * users who were already signed in before sync existed, and retries after a
+     * failed restore. Cheap no-op once done.
+     */
+    fun ensureRestored() {
+        val uid = FirebaseManager.uid ?: return
+        if (repo.prefs.restoredUid == uid || restoreJob?.isActive == true) return
+        restoreJob = restoreFromCloud()
+    }
 
     /**
      * Restore cloud stats + attempts to local device after sign-in (handles
@@ -93,7 +127,7 @@ class MainViewModel(val repo: Repository) : ViewModel() {
     private fun refresh() {
         _xp.postValue(repo.prefs.xp)
         _streak.postValue(repo.prefs.streak)
-        _daily.postValue(0)
+        _daily.postValue(repo.prefs.dailySecs)
     }
 
     fun allAttempts() = repo.allAttempts()

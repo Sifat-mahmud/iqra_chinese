@@ -66,14 +66,20 @@ object TtsManager : TextToSpeech.OnInitListener {
 
     fun init(ctx: Context) = initWithContext(ctx)
 
-    /** Speak text — tries bundled audio first, then TTS API, then intent fallback */
-    fun speak(text: String, slow: Boolean = false) {
+    // Stored callback for the currently-speaking utterance
+    private var onDoneCallback: (() -> Unit)? = null
+
+    /** Speak text — tries bundled audio first, then TTS API, then intent fallback.
+     *  [onDone] is called on the main thread when playback completes. */
+    fun speak(text: String, slow: Boolean = false, onDone: (() -> Unit)? = null) {
+        onDoneCallback = onDone
+
         // 1. Try bundled audio (always works offline, any device)
-        if (BundledTts.speak(text, slow)) return
+        if (BundledTts.speak(text, slow, onDone)) return
 
         // 2. Standard TTS API
         when {
-            usingIntentFallback -> speakViaIntent(text)
+            usingIntentFallback -> { speakViaIntent(text); /* no completion callback available */ }
             !ready              -> { pendingText = text }
             else                -> tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, "u${text.hashCode()}")
         }
@@ -133,6 +139,7 @@ object TtsManager : TextToSpeech.OnInitListener {
     }
 
     fun stop() {
+        onDoneCallback = null
         mainHandler.post { try { tts?.stop() } catch (_: Exception) {} }
     }
 
@@ -241,7 +248,13 @@ object TtsManager : TextToSpeech.OnInitListener {
         engine.setPitch(1.0f)
         engine.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
             override fun onStart(id: String?) {}
-            override fun onDone(id: String?)  {}
+            override fun onDone(id: String?) {
+                // Fire stored callback on main thread
+                mainHandler.post {
+                    onDoneCallback?.invoke()
+                    onDoneCallback = null
+                }
+            }
             override fun onError(id: String?) { Log.w("TtsManager", "Utterance error: $id") }
         })
         status = Status.READY; ready = true
