@@ -1,255 +1,298 @@
-<p align="center">
-  <img src="animations/banner.svg" alt="Iqra Chinese banner" width="100%">
-</p>
+# Iqra Chinese 学
+
+**Learn HSK 1–6 Mandarin vocabulary on Android: type the pinyin, type the meaning, hear every word, and let daily goals and reminders keep you studying.**
+
+![Android](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9-7F52FF?logo=kotlin&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-backup%20%26%20sign--in-FFCA28?logo=firebase&logoColor=black)
 
 <p align="center">
-  <b>An offline HSK 1–6 vocabulary trainer for Android</b><br>
-  Learn words and sentences, test yourself, keep a daily streak, and never miss a study session.
+  <img src="docs/gif/home.gif" width="260" alt="Home screen tour">
+  &nbsp;&nbsp;
+  <img src="docs/gif/sentence-flow.gif" width="260" alt="Typing an answer on a sentence card">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white" alt="Android">
-  <img src="https://img.shields.io/badge/language-Kotlin-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin">
-  <img src="https://img.shields.io/badge/mode-Offline-f5c842" alt="Offline">
-  <img src="https://img.shields.io/badge/HSK-1%E2%80%936-fb923c" alt="HSK 1-6">
-</p>
+## Contents
+
+- [What you get](#what-you-get)
+- [Home screen](#home-screen)
+- [Practising](#practising)
+- [Daily goal and your study day](#daily-goal-and-your-study-day)
+- [Reminders and alarms](#reminders-and-alarms)
+- [Stats](#stats)
+- [Tests](#tests)
+- [Settings](#settings)
+- [Account and cloud backup](#account-and-cloud-backup)
+- [Troubleshooting](#troubleshooting)
+- [For developers](#for-developers)
+
+> The animations in this guide are built from real screenshots of the app. They are illustrations, so timing differs slightly from the real thing.
 
 ---
 
-## 📱 Quick tour
+## What you get
 
-<p align="center">
-  <img src="animations/app-tour.gif" alt="Animated tour of Iqra Chinese: Home, Test, Stats, Settings" width="300">
-</p>
-
-The app has five tabs along the bottom: **Home · Groups · Test · Stats · Settings**.
-
----
-
-## Table of contents
-
-1. [Features at a glance](#features-at-a-glance)
-2. [Home: your learning dashboard](#1-home-your-learning-dashboard)
-3. [Sentences: practise full phrases](#2-sentences-practise-full-phrases)
-4. [Test: quiz yourself](#3-test-quiz-yourself)
-5. [Stats: see your progress](#4-stats-see-your-progress)
-6. [Settings: tune the app](#5-settings-tune-the-app)
-7. [Daily study loop](#daily-study-loop)
-8. [Tips and troubleshooting](#tips-and-troubleshooting)
+- **HSK 1–6 vocabulary.** The complete official lists for HSK 1, 2 and 3 (about 600 words) plus a starter set for HSK 4–6.
+- **150+ example sentences** with a word-by-word breakdown.
+- **Sound everywhere.** Most words and sentences ship with recorded audio, so they play even on phones whose text-to-speech is restricted (some Xiaomi/MIUI devices).
+- **Active recall.** You type the pinyin *and* the meaning, instead of just flipping cards.
+- **Daily goal, streak and 13 achievements.**
+- **Hourly reminders** that turn into a full alarm if you still have not studied.
+- **Stats** for accuracy, words passed and time studied.
+- **Optional cloud backup** (Google or email) that restores everything on a new phone.
+- **Works offline.** Only sign-in and backup need a connection.
 
 ---
 
-## Features at a glance
+## Home screen
 
-| Feature | What it does |
+<p align="center"><img src="docs/gif/home.gif" width="300" alt="Annotated tour of the Home screen"></p>
+
+1. **XP and day streak** at the top. XP grows with correct answers; the streak counts consecutive study days.
+2. **Words mastered** across all levels (a word counts once you have answered it correctly).
+3. **Today's study time** against your daily goal, with a progress bar.
+4. **Level cards** show mastery per HSK level. **Tap a card to start word practice.**
+5. **Sentences** opens sentence practice for that level.
+6. **Locked levels.** The next level opens when you reach **80 %** mastery of the current one.
+7. **Bottom bar:** Home, Groups (your own word lists), Test, Stats, Settings.
+
+Scroll down on Home to see your achievements.
+
+---
+
+## Practising
+
+### Word cards
+
+Tap a level card on Home. Each card shows a Chinese word (pinyin and meaning appear as hints, unless you turn them off in [Settings](#settings)).
+
+1. The **audio plays by itself and repeats every second** until you move on. Tap the speaker to replay, or the slow button to hear it slower.
+2. **Type the pinyin** and press **Enter**. The cursor jumps to the next box.
+3. **Type the English meaning**, then tap **Check**.
+4. If **both** are right, you move to the next word.
+
+Good to know:
+
+- Word cards have **no Skip**. Get each word right once to move on.
+- The meaning check is forgiving: any one of the listed meanings is accepted.
+- **Hint** and **Add to group** buttons are on the card. Groups are your own lists of tricky words.
+- Leave the app and come back later: **every level reopens at the card you stopped on.**
+- Use the level pills at the top to switch level.
+
+### Sentence cards
+
+Tap **Sentences** on a level card. It works like word cards, with a few extras.
+
+<p align="center"><img src="docs/gif/sentence-tour.gif" width="300" alt="Annotated tour of a sentence card"></p>
+
+- A banner reminds you that **about 60 % of the key words** in your meaning must match.
+- **Skip** goes to the next sentence.
+- **Words in this sentence** (below the buttons) lists every word of the sentence with pinyin, meaning and its HSK level, taken from the same word list as the rest of the app.
+
+### Typing the pinyin: what counts as correct
+
+Capital letters, spaces, tone marks, tone numbers and punctuation are all ignored.
+
+| You type | Accepted for *nǐ hǎo* |
 |---|---|
-| **HSK 1–6 levels** | Words grouped by HSK level. Each level unlocks after you complete the previous one. |
-| **Words and sentences** | Practise single words, or type the pinyin and meaning of example sentences, with audio and a per-word breakdown. |
-| **Two test modes** | Character → Meaning and Meaning → Character, 20 questions per test. |
-| **XP, levels and streaks** | Earn XP for correct answers and keep a daily streak going. |
-| **Daily study goal** | Set a goal from 5 to 60 minutes and watch the timer fill. |
-| **Statistics** | Accuracy, attempts, perfect answers, 7-day charts and pass/fail breakdown. |
-| **Alarm and reminders** | Two-phase reminder that escalates if you haven't hit your goal. |
-| **Cloud backup** | Sign in to back up and sync your progress. |
-| **Offline first** | The full word list (692 words across 6 HSK levels) works without internet. |
-| **Pinyin and meaning toggles** | Show or hide pronunciation and English translation while you practise. |
+| `nihao` | yes |
+| `ni hao` | yes |
+| `NI HAO` | yes |
+| `nǐ hǎo` | yes |
+| `ni3hao3` | yes |
+| `nihau` | no |
+
+Sentences ending in `.` or `?` work the same way: you may leave the punctuation out.
+
+### The typing flow
+
+<p align="center"><img src="docs/gif/sentence-flow.gif" width="300" alt="Typing pinyin, pressing Enter, typing the meaning and tapping Check"></p>
+
+Pinyin, **Enter**, meaning, **Check**. Pressing **Backspace in an empty meaning box** takes you back to the pinyin box.
+
+### When something is missing or wrong
+
+<p align="center"><img src="docs/gif/feedback.gif" width="300" alt="Empty-box error, wrong answer and correct answer"></p>
+
+- **Left a box empty?** It gets a red border and a message under it. Nothing is counted against you.
+- **Wrong answer?** Only the wrong box turns red and is cleared; the right one stays green so you do not retype it.
+- **Both right?** Both boxes turn green and the next card appears.
 
 ---
 
-## 1. Home: your learning dashboard
+## Daily goal and your study day
 
-<p align="center">
-  <img src="screenshots/01-home.jpg" alt="Home screen" width="280">
-</p>
-
-**Top card**
-
-- **XP badge** (⚡) shows your total experience points.
-- **Streak badge** (🔥) shows how many days in a row you've studied.
-- **Mastered** is the total number of words you have mastered so far.
-- **Today** is the time studied today against your daily goal, for example `8m 50s / 30m`. The green bar underneath fills as you study.
-
-**HSK levels**
-
-- Each level card shows how many words you have mastered (for example `50 / 300`) and a percentage.
-- Tap a level to start practising its words.
-- Tap **📖 SENTENCES** on a level to practise with sentences instead of single words (see [Sentences](#2-sentences-practise-full-phrases)).
-- Levels that are not yet available are greyed out with a 🔒 and a hint such as *"Complete HSK 3 first"*. Reach 100% on the previous level to unlock the next.
+- Your **daily goal** is between **5 and 60 minutes** (30 by default). Set it with the slider in [Settings](#settings). The progress bars on Home, Stats and Settings, and the reminders, all follow it.
+- Your **study day** does not have to start at midnight. In Settings you pick when your day starts (default 00:01). The day then runs **until one minute before the next start**: set it to 06:00 and your timer and streak reset at 06:00, not at 23:59.
+- Saving a new day-start time **reschedules all alarms and notifications** straight away.
 
 ---
 
-## 2. Sentences: practise full phrases
+## Reminders and alarms
 
-<p align="center">
-  <img src="screenshots/06-sentences.jpg" alt="Sentences practice screen" width="280">
-</p>
+<p align="center"><img src="docs/gif/alarm-timeline.gif" width="560" alt="Timeline of a study day showing hourly notifications, then alarms, and how reaching the goal silences them"></p>
 
-Open it by tapping **📖 SENTENCES** on any level card on Home. Use the HSK 1 / HSK 2 / HSK 3 tabs to switch level.
+If you have not reached your goal yet:
 
-**The sentence card**
-
-- A counter such as `20 / 38` shows where you are in the level.
-- The sentence is shown in Chinese characters (`早上好！`), with its pinyin (*zǎo shàng hǎo!*) and English translation (*Good morning!*) underneath. The pinyin and meaning lines follow your **Show Pinyin** and **Show Meaning** toggles in Settings.
-
-**How to answer**
-
-1. Tap the 🔊 buttons to hear the sentence (the second button plays it differently, for example slower).
-2. Type the **pinyin** in the first box, for example `nihaoma`. Tone marks are not needed.
-3. Type the **English meaning** in the second box.
-4. Tap **CHECK ✓**. You need a **60% word match** to advance.
-5. Not sure? Tap **SKIP →** to move on.
-
-**Words in this sentence**
-
-Below the answer boxes, each word in the sentence is listed with its character, pinyin, English meaning and an **HSK badge** showing which level it belongs to. In the example, 早上 (*zǎoshang*, morning) is HSK 2 and 好 (*hǎo*, good) is HSK 1. This helps you spot words you still need to study.
-
----
-
-## 3. Test: quiz yourself
-
-<p align="center">
-  <img src="screenshots/03-test.jpg" alt="Test screen" width="280">
-</p>
-
-1. **Pick a level** with the HSK 1 / HSK 2 / HSK 3 tabs at the top (only unlocked levels appear).
-2. **Choose the content**: `WORDS` or `SENTENCES`.
-3. **Choose a test mode**:
-   - `CHAR → MEANING`: you see the Chinese character and pick the meaning.
-   - `MEANING → CHAR`: you see the meaning and pick the character.
-4. Tap **🚀 START TEST (20 ITEMS)**.
-
-Your best test score is stored and shown on the Stats and Settings screens.
-
----
-
-## 4. Stats: see your progress
-
-<p align="center">
-  <img src="screenshots/02-stats.jpg" alt="Statistics screen" width="280">
-</p>
-
-| Section | Meaning |
+| Part of your study day | What happens |
 |---|---|
-| **Attempts** | Total number of answers you have given. |
-| **Accuracy** | Percentage of correct answers. |
-| **Perfect** | Number of answers you got right on the first try. |
-| **XP / days / Best test** | Total XP, current streak, and your best test score. |
-| **Today's Study** | Minutes studied today versus your goal. |
-| **Words passed, last 7 days** | Bar chart of words you passed each day. |
-| **Time studied (min), last 7 days** | Bar chart of study minutes per day, with a weekly total. |
-| **Pass vs Fail** | Green and red bar showing correct (✓) and incorrect (✗) answers. |
-| **HSK level mastery** | Mastery per level (scroll down). |
+| **Hours 0–12** | A notification **every hour**, with one snooze |
+| **Hours 12–24** | A **full alarm popup every hour**, with one snooze and no dismiss |
+
+- **Reach your goal and everything for that day stops**, including an alarm that is already ringing.
+- Reminders are **scheduled a week ahead**, so they keep working even if you do not open the app for days, and after a restart.
+- A notification or alarm always shows the **Iqra Chinese** name and icon, so you know where the sound comes from.
+
+To make sure alarms can show up:
+
+- Allow **notifications** when asked.
+- Grant **Display over other apps** (Settings has a button for it) so the alarm can pop up over whatever you are doing.
+- On **Xiaomi/MIUI**, allow **Autostart** for the app (it asks you the first time).
 
 ---
 
-## 5. Settings: tune the app
+## Stats
 
-<p align="center">
-  <img src="animations/settings-scroll.gif" alt="Animated scroll through the Settings screen" width="280">
-</p>
+<p align="center"><img src="docs/gif/stats.gif" width="300" alt="Annotated tour of the Stats screen"></p>
 
-### Account and cloud backup
-
-<p align="center">
-  <img src="screenshots/04-settings-top.jpg" alt="Settings: account, goal, display, alarm" width="280">
-</p>
-
-- Shows the account you are signed in with and the date of the **last backup**.
-- **SYNC NOW** uploads your progress immediately.
-- **SIGN OUT** disconnects your account.
-
-### XP, level and daily goal
-
-- Your XP and current level (for example `730 XP · Level 2`), streak and best test.
-- Drag the **Daily study goal** slider anywhere from **5 to 60 minutes**.
-
-### Display
-
-| Toggle | Effect |
-|---|---|
-| **Show Pinyin** | Shows romanized pronunciation on cards. |
-| **Show Meaning** | Shows the English translation while practising. |
-
-### Alarm and reminders
-
-The app nags you in two phases if you haven't reached your daily goal:
-
-| Phase | When | Behaviour |
-|---|---|---|
-| **Phase 1** | Hours 0–12 of your day | Notification with 1× snooze |
-| **Phase 2** | Hours 12–24 | **Full alarm** with 1× snooze, no dismiss until you study |
-
-The card tells you which phase is active and when the next check happens.
-
-<p align="center">
-  <img src="screenshots/05-settings-bottom.jpg" alt="Settings: day start, TTS, danger zone" width="280">
-</p>
-
-- **Day starts at**: choose when your "day" resets (hour and minute pickers), then tap **SAVE**.
-- **TTS (text-to-speech)**: tap **TEST TTS** to check pronunciation audio, or **RETRY** to re-initialise it. On some devices (for example Xiaomi MIUI) TTS may show as *Limited*.
-- **Alarm overlay permission**: shows ✅ when enabled. The full alarm needs it to appear over other apps.
-
-### ⚠️ Danger zone
-
-| Button | What it does |
-|---|---|
-| **RESET PROGRESS** | Clears your learning progress. |
-| **REPLAY APP TOUR** | Shows the first-run walkthrough again. |
-| **RESET EVERYTHING** | Wipes all data and settings. Use with care. |
-
-At the bottom you'll also see the app summary: **692 words · 6 HSK levels · Offline**.
+The two weekly charts are grouped by **study day** (see above), and the right-most bar is today. Scroll down for **mastery per HSK level**.
 
 ---
 
-## Daily study loop
+## Tests
 
-```mermaid
-flowchart LR
-    A[Open Home] --> B[Pick an unlocked HSK level]
-    B --> C[Practise words or sentences]
-    C --> D[Take a 20-item Test]
-    D --> E[Earn XP and mastery]
-    E --> F{Daily goal reached?}
-    F -- No --> C
-    F -- Yes --> G[Streak continues 🔥]
-    G --> H[Check Stats]
+<p align="center"><img src="docs/img/test.jpg" width="260" alt="Test screen"></p>
+
+1. Pick an **HSK level**.
+2. Choose **Words** or **Sentences**.
+3. For words, choose the direction: **Char → Meaning** or **Meaning → Char**.
+4. Tap **Start test**. You get **20 random items** from that level.
+
+Your **best score** is saved and shown on Stats and in Settings.
+
+**Groups.** Add words you find hard to your own lists (from a word card) and practise just those from the **Groups** tab.
+
+---
+
+## Settings
+
+<p align="center"><img src="docs/gif/settings-tour.gif" width="300" alt="Annotated tour of the Settings screen"></p>
+
+**Top of the screen**
+
+- **Account and cloud backup**: sign in or out, see the last backup date, **Sync now**.
+- **Daily study goal** slider (5–60 min).
+- **Show Pinyin** and **Show Meaning**: turn them off for a harder challenge. You still have to type both answers.
+- **Alarm and reminders**: which phase you are in today and when the next check is.
+
+**Further down**
+
+- **Day starts at**: two wheels (hour and minute) and **Save**.
+- **TTS status** with **Test TTS** and **Retry**.
+- **Replay app tour** and the **overlay permission** button.
+- **Danger zone**: *Reset progress* clears XP, streak and attempts on this device; *Reset everything* also removes groups and settings. A cloud backup is **not** deleted, so signing in again can bring your progress back.
+
+---
+
+## Account and cloud backup
+
+You sign in once (email or Google). After that your progress is backed up automatically:
+
+| What is saved | When |
+|---|---|
+| XP, streak, unlocked levels, achievements, best test | Whenever you leave the app, and about once a minute while you study |
+| Every word and sentence you have practised, with its recent history | Same |
+| **Minutes studied per day** (this is what feeds the time chart and today's timer) | Same |
+
+- **New phone or reinstall?** Install the app and sign in with the same account. Your progress, today's study time and your Stats come back.
+- **Sign out and sign in again** is safe. Nothing is lost or counted twice: for every number the larger value wins, and your history is merged.
+- **Sync now** (Settings) and **Sign out** both push everything to the cloud first.
+
+---
+
+## Troubleshooting
+
+**No sound.** Open Settings and look at the TTS line. Most words and sentences have built-in recorded audio, so they should still play. Use **Test TTS** and **Retry**, and on Xiaomi make sure the app is not restricted in battery or autostart settings.
+
+**The alarm did not appear over my other app.** Check that *Display over other apps* shows as enabled in Settings, that notifications are allowed, and (on Xiaomi) that Autostart is on.
+
+**My streak or timer reset at the wrong time.** Check **Day starts at** in Settings. The reset happens at that time, not at midnight.
+
+**Progress is missing after a reinstall.** Sign in with the **same account** you used before. If you were not signed in, there is no backup to restore.
+
+---
+
+## For developers
+
+**Stack:** Kotlin 1.9.22, XML + ViewBinding, single Activity with Navigation, MVVM (`MainViewModel` + `Repository`), Room, SharedPreferences, Firebase Auth and Realtime Database, Coil and Media3 (announcement banners). Android Gradle Plugin 8.3.1, Gradle 8.4, **JDK 17**, minSdk 26, compile/target SDK 34. Package `com.iqra.chinese`.
+
+### Build
+
+1. Install Android Studio with the Android 14 (API 34) SDK and JDK 17.
+2. Create a Firebase project, add an Android app with package **`com.iqra.chinese`**, and add your debug **SHA-1**.
+3. Download **`google-services.json`** into `app/`.
+4. Enable the **Email/Password** and **Google** sign-in providers, and create a **Realtime Database**.
+5. Put your Web client ID (the OAuth entry with `client_type: 3` in `google-services.json`) into `WEB_CLIENT_ID` in `ui/AuthFragment.kt`.
+6. Set the database rules (below), then run `./gradlew assembleDebug`.
+
+```json
+{
+  "rules": {
+    "users": { "$uid": { ".read": "$uid === auth.uid", ".write": "$uid === auth.uid" } },
+    "banners": {
+      ".read": true,
+      "active":   { ".write": false },
+      "stats":    { ".write": true },
+      "feedback": { ".write": true }
+    }
+  }
+}
 ```
 
-A good routine:
-
-1. Open **Home** and check the `Today` timer.
-2. Practise your current level until the timer reaches your goal.
-3. Run a **Test** in both modes (Char → Meaning, then Meaning → Char).
-4. Check **Stats** to spot weak days and aim for an unbroken streak.
-5. Tap **SYNC NOW** in Settings to back up your progress.
-
----
-
-## Tips and troubleshooting
-
-- **Can't open HSK 4 or higher?** Finish the previous level first. Locked levels show which level you must complete.
-- **Alarm doesn't appear over other apps?** Make sure *Alarm overlay permission* shows ✅ in Settings.
-- **No sound on cards?** Tap **TEST TTS**, then **RETRY**. Install or enable a text-to-speech engine in your phone's system settings if needed.
-- **Want less distraction while testing yourself?** Turn off **Show Pinyin** and **Show Meaning** in Settings.
-- **Changing devices?** Sign in and use **SYNC NOW** before you leave, then sign in on the new device.
-
----
-
-## Project assets
+### Where things live
 
 ```
-.
-├── README.md
-├── make_animations.py        # regenerates the GIFs from the screenshots
-├── animations/
-│   ├── banner.svg            # animated header
-│   ├── app-tour.gif          # cross-fade tour of all screens
-│   └── settings-scroll.gif   # scrolling walkthrough of Settings
-└── screenshots/
-    ├── 01-home.jpg
-    ├── 02-stats.jpg
-    ├── 03-test.jpg
-    ├── 06-sentences.jpg
-    ├── 04-settings-top.jpg
-    └── 05-settings-bottom.jpg
+app/src/main/java/com/iqra/chinese/
+├── MainActivity.kt          navigation, banners, lifecycle hooks (sync on leaving the app)
+├── data/                    HskData (all words + sentences), Room, Prefs, Repository
+├── ui/                      Home, Practice (word cards), Sentence, Stats, Settings, Test, Groups, Auth, AppTour
+├── alarm/                   hourly scheduler, receiver, alarm service + overlay, alarm screen
+├── tts/                     TtsManager and BundledTts (recorded audio lookup)
+├── firebase/                FirebaseManager (sign-in + sync), BannerManager
+└── util/PinyinMatch.kt      the pinyin comparison rules
+app/src/main/res/raw/        recorded audio
 ```
+
+### Adding vocabulary
+
+- Words and sentences are Kotlin lists in `data/HskData.kt`.
+  - Word id: `{level}_{characters}`, for example `2_帮助`. Tone is the first syllable's tone, `5` for neutral.
+  - Sentence id: `s{level}_{number}`.
+- Audio lives in `res/raw/` and is looked up **by the exact text**:
+  - words: `w_<hex code points joined by _>.mp3` (for 帮助 that is `w_5e2e_52a9.mp3`)
+  - sentences: `s_<sentence id>.mp3`
+  - register each new file in `AUDIO_MAP` in `tts/BundledTts.kt`.
+- Items without a bundled file fall back to the phone's text-to-speech.
+
+### Cloud data layout
+
+```
+/users/{uid}/stats       xp, streak, bestTest, unlockedLevels, earnedAch, …
+/users/{uid}/attempts    one entry per word/sentence: id, pass, fail, level, type, lastTs, history
+/users/{uid}/time        { "yyyy-MM-dd": secondsStudied }  one value per study day
+```
+
+Nothing is pushed until the account's cloud data has been merged into the device, so a fresh install can never overwrite an existing backup.
+
+### Announcement banners
+
+Push a message to every user with one REST call (no app update needed):
+
+```
+PUT https://<your-db>.firebaseio.com/banners/active.json?auth=<DATABASE_SECRET>
+{ "id": "2026-11-welcome", "title": "Hello!", "message": "New sentences added.",
+  "imageUrl": "", "videoUrl": "", "actionLabel": "", "actionUrl": "",
+  "feedback": false, "feedbackQuestion": "", "enabled": true }
+```
+
+A new `id` shows the banner again to everyone; `"enabled": false` hides it. Keep the database secret private.
